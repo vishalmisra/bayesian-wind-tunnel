@@ -133,6 +133,59 @@ python experiments/paper1_hmm/eval_length_gen.py \
 
 ---
 
+## Paper I: Ablation Experiments
+
+### Figure 8: Head Ablation Heatmap
+
+Tests which attention heads are critical for Bayesian inference:
+
+```bash
+python experiments/ablations/head_ablation.py \
+    --checkpoint logs/bijection_v20/ckpt_final.pt \
+    --domain-size 20 \
+    --seq-length 19 \
+    --n-samples 500 \
+    --output-dir results/ablations
+```
+
+**Expected output:**
+- `results/ablations/head_ablation_heatmap.png`
+- `results/ablations/single_head_ablation.csv`
+- Most heads have < 5% accuracy drop when ablated (distributed computation)
+
+### Figure 9: Layer/Block Ablation
+
+Tests FFN vs Attention importance per layer:
+
+```bash
+python experiments/ablations/layer_ablation.py \
+    --checkpoint logs/bijection_v20/ckpt_final.pt \
+    --domain-size 20 \
+    --seq-length 19 \
+    --n-samples 500 \
+    --output-dir results/ablations
+```
+
+**Expected output:**
+- `results/ablations/layer_ablation.png`
+- `results/ablations/attn_vs_ffn.png`
+- Small per-layer impact suggests holographic computation
+
+### Multi-Head Ablation (Compounding Test)
+
+Tests if ablating multiple heads causes compounding degradation:
+
+```bash
+python experiments/ablations/head_ablation.py \
+    --checkpoint logs/bijection_v20/ckpt_final.pt \
+    --test-multihead \
+    --output-dir results/ablations
+```
+
+**Expected:** Multi-head ablation degrades more than sum of individual ablations, suggesting distributed computation.
+
+---
+
 ## Paper III: Geometric Scaling of Bayesian Inference in LLMs
 
 ### Figure 1: Value Manifold Across Models
@@ -226,6 +279,8 @@ After running all experiments, verify:
 | I | 5 | PC1 variance | > 80% |
 | I | 6 | Layer 0 orthogonality | < 0.1 |
 | I | 7 | K=50 generalization | MAE < 0.03 bits |
+| I | 8 | Single-head ablation | < 5% drop each |
+| I | 9 | Layer bypass impact | < 10% per layer |
 | III | 1 | PC1+PC2 (domain-restricted) | > 70% |
 | III | 2 | Domain collapse | Single > Mixed |
 | III | 3 | SULA correlation | ρ > 0.5 |
