@@ -1,0 +1,38 @@
+# Configuration for production LLM geometry analysis (Paper III)
+
+models:
+  pythia_410m:
+    name: "EleutherAI/pythia-410m"
+    dtype: "float16"
+    device_map: "auto"
+    description: "Pythia 410M - GPT-NeoX architecture"
+  
+  phi2:
+    name: "microsoft/phi-2"
+    dtype: "float16"
+    device_map: "auto"
+    description: "Phi-2 - Microsoft's efficient LLM"
+  
+  llama_3_1b:
+    name: "meta-llama/Llama-3.2-1B"
+    dtype: "bfloat16"
+    device_map: "auto"
+    description: "Llama 3.2 1B - Meta's open LLM"
+    requires_auth: true
+  
+  mistral_7b:
+    name: "mistralai/Mistral-7B-v0.1"
+    dtype: "float16"
+    device_map: "auto"
+    description: "Mistral 7B - Sliding window attention"
+
+analysis:
+  vocab_sample: 100          # Vocabulary sample for key orthogonality
+  n_prompts: 15              # Prompts for value manifold
+  entropy_threshold: 0.15    # Key orthogonality threshold
+  pca_variance_target: 0.70  # Target PC1+PC2 variance
+
+# Expected results (from Paper III):
+# - Layer 0 orthogonality: < 0.15 (near-orthogonal)
+# - PC1+PC2 variance: 70-95% (single-domain prompts)
+# - PC1-entropy correlation: > 0.5 (strong)

@@ -1,0 +1,57 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the papers below."
+title: "Bayesian Wind Tunnel"
+authors:
+  - family-names: "Aggarwal"
+    given-names: "Naman"
+    affiliation: "Dream Sports, USA"
+  - family-names: "Dalal"
+    given-names: "Siddhartha R."
+    affiliation: "Columbia University, USA"
+  - family-names: "Misra"
+    given-names: "Vishal"
+    affiliation: "Columbia University, USA"
+version: "1.0.0"
+date-released: "2025-01-01"
+url: "https://github.com/YOUR_USERNAME/bayesian-wind-tunnel"
+license: MIT
+
+references:
+  - type: article
+    title: "The Bayesian Geometry of Transformer Attention"
+    authors:
+      - family-names: "Aggarwal"
+        given-names: "Naman"
+      - family-names: "Dalal"
+        given-names: "Siddhartha R."
+      - family-names: "Misra"
+        given-names: "Vishal"
+    year: 2025
+    journal: "arXiv preprint"
+    notes: "Paper I of the Bayesian Attention Trilogy"
+    
+  - type: article
+    title: "Gradient Dynamics of Attention: How Cross-Entropy Sculpts Bayesian Manifolds"
+    authors:
+      - family-names: "Aggarwal"
+        given-names: "Naman"
+      - family-names: "Misra"
+        given-names: "Vishal"
+      - family-names: "Dalal"
+        given-names: "Siddhartha R."
+    year: 2025
+    journal: "arXiv preprint"
+    notes: "Paper II of the Bayesian Attention Trilogy"
+    
+  - type: article
+    title: "Geometric Scaling of Bayesian Inference in LLMs"
+    authors:
+      - family-names: "Aggarwal"
+        given-names: "Naman"
+      - family-names: "Dalal"
+        given-names: "Siddhartha R."
+      - family-names: "Misra"
+        given-names: "Vishal"
+    year: 2025
+    journal: "arXiv preprint"
+    notes: "Paper III of the Bayesian Attention Trilogy"

@@ -1,0 +1,32 @@
+# Configuration for bijection learning experiments (Paper I)
+# V=20, L=19, sampling without replacement
+
+data:
+  V: 20                      # Vocabulary size (domain size)
+  L: 19                      # Context length (number of key-value pairs)
+  with_replacement: false    # Sample keys without replacement
+  query_from_context: true   # Query key must appear in context
+  n_train: 1000000           # Training samples
+  n_val: 10000               # Validation samples
+
+model:
+  dim: 192                   # Embedding dimension
+  n_layers: 6                # Number of transformer blocks
+  n_heads: 6                 # Number of attention heads
+  dropout: 0.0               # Dropout rate (0 for small models)
+
+training:
+  batch_size: 128            # Batch size per GPU
+  lr: 3e-4                   # Learning rate
+  max_steps: 100000          # Maximum training steps
+  warmup_steps: 2000         # Linear warmup steps
+  weight_decay: 0.1          # AdamW weight decay
+  grad_clip: 1.0             # Gradient clipping norm
+  save_every: 10000          # Checkpoint frequency
+  eval_every: 1000           # Evaluation frequency
+  seed: 42                   # Random seed
+
+# Expected results:
+# - Training loss: ~0.5-1.0 at convergence
+# - Val accuracy: ~50% (Bayesian limit at L=19)
+# - Entropy MAE: < 0.01 bits
