@@ -6,9 +6,9 @@ This repository contains code to reproduce all experiments from three papers on 
 
 | Paper | Title | arXiv |
 |-------|-------|-------|
-| **I** | Attention Is Really What You Need: Exact Bayesian Inference in Transformers | [2512.22471](https://arxiv.org/abs/2512.22471) |
-| **II** | Gradient Dynamics of Transformers: An EM Interpretation of Attention | [2512.22473](https://arxiv.org/abs/2512.22473) |
-| **III** | Do Large Language Models Implement Bayesian Inference? A Geometric Analysis | [2512.23752](https://arxiv.org/abs/2512.23752) |
+| **I** | The Bayesian Geometry of Transformer Attention | [2512.22471](https://arxiv.org/abs/2512.22471) |
+| **II** | Gradient Dynamics of Attention: How Cross-Entropy Sculpts Bayesian Manifolds | [2512.22473](https://arxiv.org/abs/2512.22473) |
+| **III** | Geometric Scaling of Bayesian Inference in LLMs | [2512.23752](https://arxiv.org/abs/2512.23752) |
 
 ## Repository structure
 
@@ -189,21 +189,21 @@ python experiments/paper1_bijection/figures/generate_primitives_figure.py
 
 ```bibtex
 @article{agarwal2025bayesian1,
-  title={Attention Is Really What You Need: Exact Bayesian Inference in Transformers via Wind Tunnels},
+  title={The Bayesian Geometry of Transformer Attention},
   author={Agarwal, Naman and Dalal, Siddhartha R. and Misra, Vishal},
   journal={arXiv preprint arXiv:2512.22471},
   year={2025}
 }
 
 @article{agarwal2025gradient,
-  title={Gradient Dynamics of Transformers: An EM Interpretation of Attention},
+  title={Gradient Dynamics of Attention: How Cross-Entropy Sculpts Bayesian Manifolds},
   author={Agarwal, Naman and Dalal, Siddhartha R. and Misra, Vishal},
   journal={arXiv preprint arXiv:2512.22473},
   year={2025}
 }
 
 @article{agarwal2025geometric3,
-  title={Do Large Language Models Implement Bayesian Inference? A Geometric Analysis},
+  title={Geometric Scaling of Bayesian Inference in LLMs},
   author={Agarwal, Naman and Dalal, Siddhartha R. and Misra, Vishal},
   journal={arXiv preprint arXiv:2512.23752},
   year={2025}
