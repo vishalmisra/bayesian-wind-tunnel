@@ -31,8 +31,17 @@ import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.decomposition import PCA
 
-from experiments.icl_bayesian.visualize_icl_sula import mean_ci
-from experiments.icl_bayesian.extract_geometry_sula import safe_name
+from typing import Tuple; import numpy as np
+
+def mean_ci(arr):
+    m = np.mean(arr)
+    se = np.std(arr) / np.sqrt(len(arr))
+    return m, m - 1.96*se, m + 1.96*se
+
+def safe_name(model_name):
+    return model_name.replace('/', '_').replace('-', '_')
+
+
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]

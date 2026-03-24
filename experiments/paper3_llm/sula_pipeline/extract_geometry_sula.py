@@ -26,7 +26,7 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from experiments.icl_bayesian.hf_activations import HFExtractor, InterventionConfig
+from hf_activations import HFExtractor, InterventionConfig
 
 PROMPTS_DEFAULT = Path("icl_sula_prompts.json")
 RESULTS_ROOT = Path("results/icl_sula")
