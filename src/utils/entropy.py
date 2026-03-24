@@ -187,3 +187,6 @@ def evaluate_entropy_calibration(
         "L": L,
         "with_replacement": with_replacement,
     }
+
+# Compatibility alias
+build_bayes_posterior = bayes_bijection_posterior

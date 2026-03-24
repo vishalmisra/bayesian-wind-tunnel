@@ -114,6 +114,8 @@ class TinyGPT(nn.Module):
         n_heads: Number of attention heads
         max_seq_len: Maximum sequence length
         dropout: Dropout rate
+        pointer_lookup: Enable pointer mechanism for bijection task
+        pointer_mode: 'replace' or 'add' for how pointer logits combine with base logits
     """
     def __init__(
         self,
@@ -123,11 +125,15 @@ class TinyGPT(nn.Module):
         n_heads: int = 6,
         max_seq_len: int = 128,
         dropout: float = 0.0,
+        pointer_lookup: bool = False,
+        pointer_mode: str = "replace",
     ):
         super().__init__()
         self.vocab_size = vocab_size
         self.dim = dim
         self.n_layers = n_layers
+        self.pointer_lookup = pointer_lookup
+        self.pointer_mode = pointer_mode
         
         self.tok_emb = nn.Embedding(vocab_size, dim)
         self.pos_emb = nn.Embedding(max_seq_len, dim)
@@ -156,7 +162,8 @@ class TinyGPT(nn.Module):
     def forward(
         self, 
         x: torch.Tensor, 
-        targets: Optional[torch.Tensor] = None
+        targets: Optional[torch.Tensor] = None,
+        disable_pointer: bool = False
     ) -> Tuple[torch.Tensor, Optional[torch.Tensor]]:
         """
         Forward pass.
@@ -164,6 +171,7 @@ class TinyGPT(nn.Module):
         Args:
             x: Input token IDs of shape (B, T)
             targets: Optional target IDs for computing loss
+            disable_pointer: Disable pointer mechanism even if enabled
             
         Returns:
             logits: Output logits of shape (B, T, vocab_size)
@@ -181,6 +189,31 @@ class TinyGPT(nn.Module):
         
         h = self.ln_f(h)
         logits = self.head(h)
+        
+        # Pointer mechanism for bijection task
+        # Structure: k0 v0 k1 v1 ... k_{L-1} v_{L-1} query
+        # Keys at even positions [0, 2, 4, ...], values at odd [1, 3, 5, ...]
+        if self.pointer_lookup and not disable_pointer and T >= 3:
+            # Extract key representations and value token IDs
+            keys_h = h[:, 0:T-1:2, :]      # (B, L, dim) - key positions
+            vals_ids = x[:, 1:T-1:2]        # (B, L) - value token IDs
+            query_h = h[:, -1:, :]          # (B, 1, dim) - query position
+            
+            # Compute attention scores between query and keys
+            # (B, 1, dim) @ (B, dim, L) -> (B, 1, L)
+            attn_scores = torch.bmm(query_h, keys_h.transpose(1, 2))
+            attn_scores = attn_scores / math.sqrt(self.dim)
+            w = F.softmax(attn_scores, dim=-1).squeeze(1)  # (B, L)
+            
+            # Scatter attention weights to value token positions
+            eps = 1e-9
+            pointer_logits = torch.full((B, self.vocab_size), -1e9, device=device)
+            pointer_logits.scatter_(1, vals_ids, torch.log(w + eps))
+            
+            if self.pointer_mode == "replace":
+                logits[:, -1, :] = pointer_logits
+            else:  # add
+                logits[:, -1, :] = logits[:, -1, :] + pointer_logits
         
         loss = None
         if targets is not None:

@@ -206,3 +206,7 @@ class MixedBijectionDataset(Dataset):
             query_from_context=self.query_from_context,
             predict_all_values=self.predict_all_values,
         )
+
+# Compatibility aliases
+sample_perm = sample_permutation
+build_sequence_from_perm = build_sequence

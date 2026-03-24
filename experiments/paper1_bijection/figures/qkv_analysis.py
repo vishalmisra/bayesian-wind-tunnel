@@ -28,13 +28,13 @@ import matplotlib.pyplot as plt
 
 # Prefer the src/ package if available
 try:
-    from bayesg.models.tinygpt import TinyGPT
+    from train import TinyGPT
 except Exception:
     # Fallback to root path import style if needed
     import sys, os
     ROOT = Path(__file__).resolve().parents[1]
     sys.path.insert(0, str(ROOT))
-    from bayesg.models.tinygpt import TinyGPT  # type: ignore
+    from train import TinyGPT  # type: ignore
 
 
 def load_tinygpt_from_ckpt(ckpt_path: Path, device: torch.device) -> Tuple[TinyGPT, int, int, int, int]:
