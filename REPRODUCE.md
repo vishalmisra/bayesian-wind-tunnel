@@ -15,11 +15,52 @@ pip install -r requirements.txt
 python experiments/construction_boundary/recurrence_bwt.py \
     --n_steps 1000 --seeds 42 --device cuda:0 \
     --output_dir results/quick_test
-
-# Expected: loss drops from ~2.8 to ~1.7, eval shows MAE improving
 ```
 
-If this runs without errors and loss decreases, the environment is working.
+You should see output like this:
+
+```
+RECURRENCE BWT (INTEGER), SEED 42, DEVICE cuda:0
+Model: 2,774,609 parameters on cuda:0
+Task: modular recurrence vs random on Z_17 (INTEGER)
+  BF trajectory: 1, 1, 1, 17, 289, 4913, ...
+  Posterior (pi=0.5): 0.5, 0.5, 0.5, 0.944, 0.9966, ...
+  Step 500/1000: loss=2.6144
+  Step 1000/1000: loss=2.4300
+
+FINAL RESULTS (recurrence BWT, integer)
+  Entropy MAE: 1.140301 ± 1.647993 bits
+  Per-position entropy (model vs Bayes):
+    t= 1: H_model=4.0782, H_bayes=4.0875, MAE=0.0092
+    t= 2: H_model=4.0791, H_bayes=4.0133, MAE=0.0773
+    t= 3: H_model=3.8719, H_bayes=2.8293, MAE=1.1296
+```
+
+At 1000 steps the model hasn't converged yet (MAE ~1.1 bits), but loss is decreasing and the Bayesian ground truth is being computed correctly. A full 150K-step run brings MAE down to 0.014 bits.
+
+---
+
+## Script-to-figure/table map
+
+| Paper | Figure/Table | Script |
+|-------|-------------|--------|
+| I | Tab. 1 (architecture comparison) | `paper1_bijection/train.py`, `train_lstm.py`, `train_mamba.py` |
+| I | Fig. 2 (entropy calibration) | `paper1_bijection/eval_entropy.py` |
+| I | Fig. 5 (value manifold PCA) | `paper1_bijection/figures/geometric_analysis.py` |
+| I | Fig. 6 (key orthogonality) | `paper1_bijection/figures/manifold_visualization.py` |
+| I | Fig. 7 (HMM length generalization) | `paper1_hmm/eval_length_gen.py` |
+| I | Fig. 8 (head ablation) | `ablations/head_ablation.py` |
+| I | Fig. 9 (layer ablation) | `ablations/layer_ablation.py` |
+| I | Fig. 10 (Mamba 5 clusters) | `paper1_hmm/figures/mamba_5clusters.py` |
+| I | Fig. 1 (primitives taxonomy) | `paper1_bijection/figures/generate_primitives_figure.py` |
+| II | Fig. 3-6 (EM vs SGD) | `paper2_gradient/em_vs_sgd_multiseed.py` |
+| III | Fig. 1-2 (LLM geometry) | `paper3_llm/analyze_geometry.py` |
+| III | Fig. 3 (SULA trajectory) | `paper3_llm/sula_experiments.py` |
+| III | Fig. 4 (causal ablation) | `paper3_llm/sula_pipeline/compare_sula_interventions.py` |
+| CB | Fig. 1 (π experiment) | `construction_boundary/recurrence_bwt.py` |
+| CB | Tab. 2 (loss horizon) | `construction_boundary/recurrence_extrapolation.py` |
+
+All script paths are relative to `experiments/`.
 
 ## Prerequisites
 
