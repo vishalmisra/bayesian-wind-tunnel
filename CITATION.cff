@@ -2,56 +2,55 @@ cff-version: 1.2.0
 message: "If you use this software, please cite the papers below."
 title: "Bayesian Wind Tunnel"
 authors:
-  - family-names: "Aggarwal"
+  - family-names: "Agarwal"
     given-names: "Naman"
-    affiliation: "Dream Sports, USA"
   - family-names: "Dalal"
     given-names: "Siddhartha R."
-    affiliation: "Columbia University, USA"
+    affiliation: "Columbia University"
   - family-names: "Misra"
     given-names: "Vishal"
-    affiliation: "Columbia University, USA"
+    affiliation: "Columbia University"
 version: "1.0.0"
-date-released: "2025-01-01"
-url: "https://github.com/YOUR_USERNAME/bayesian-wind-tunnel"
+date-released: "2025-12-20"
+url: "https://github.com/vishalmisra/bayesian-wind-tunnel"
 license: MIT
 
 references:
   - type: article
     title: "The Bayesian Geometry of Transformer Attention"
     authors:
-      - family-names: "Aggarwal"
+      - family-names: "Agarwal"
         given-names: "Naman"
       - family-names: "Dalal"
         given-names: "Siddhartha R."
       - family-names: "Misra"
         given-names: "Vishal"
     year: 2025
-    journal: "arXiv preprint"
+    journal: "arXiv preprint arXiv:2512.22471"
     notes: "Paper I of the Bayesian Attention Trilogy"
-    
+
   - type: article
     title: "Gradient Dynamics of Attention: How Cross-Entropy Sculpts Bayesian Manifolds"
     authors:
-      - family-names: "Aggarwal"
+      - family-names: "Agarwal"
         given-names: "Naman"
-      - family-names: "Misra"
-        given-names: "Vishal"
       - family-names: "Dalal"
         given-names: "Siddhartha R."
+      - family-names: "Misra"
+        given-names: "Vishal"
     year: 2025
-    journal: "arXiv preprint"
+    journal: "arXiv preprint arXiv:2512.22473"
     notes: "Paper II of the Bayesian Attention Trilogy"
-    
+
   - type: article
     title: "Geometric Scaling of Bayesian Inference in LLMs"
     authors:
-      - family-names: "Aggarwal"
+      - family-names: "Agarwal"
         given-names: "Naman"
       - family-names: "Dalal"
         given-names: "Siddhartha R."
       - family-names: "Misra"
         given-names: "Vishal"
     year: 2025
-    journal: "arXiv preprint"
+    journal: "arXiv preprint arXiv:2512.23752"
     notes: "Paper III of the Bayesian Attention Trilogy"
