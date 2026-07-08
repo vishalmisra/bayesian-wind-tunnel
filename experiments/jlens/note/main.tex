@@ -164,10 +164,99 @@ P5 & Workspace collapses past horizon & post-horizon $\le$ null &
   \textbf{Reverse} ($4.8\times$ null; computation $0.77 \to 0.19$) \\
 \bottomrule
 \end{tabular}}
-\caption{Preregistration scorecard. Full thresholds, per-cell grids, and
-deviations are in the repository.}
+\caption{Preregistration scorecard. Status ledger: P1 passed under a
+within-family frame-mode refinement (prereg head-pullback modes pass
+only at $r{=}4$); P3's gate required balanced accuracy and ranks beyond
+the prereg grid (strict prereg outcome at $r{\le}16$: fail); P2's
+dichotomy and all of the rescue, corruption, dose-response, formation,
+and cross-architecture results are exploratory follow-ups. The
+prespecified protocol is committed verbatim
+(\texttt{PREREGISTRATION.md}); its public commit postdates the first
+runs, so it is an internal prespecification, not an externally
+timestamped preregistration. Full grids and deviations are in the
+repository.}
 \label{tab:scorecard}
 \end{table}
+
+\section{Related work}
+
+\paragraph{Lenses.} The J-lens is the Jacobian member of a family of
+early-readout methods: the logit lens~\citep{nostalgebraist2020logit},
+its learned refinement the tuned lens~\citep{belrose2023tuned}, and the
+future lens~\citep{pal2023future}, which like the J-lens targets tokens
+beyond the next position. What the Jacobian adds is locality: an
+infinitesimal readout that measures what the future depends on rather
+than what a fitted map can extract, which is the distinction our
+entropy-axis result turns into a measurement.
+
+\paragraph{Causal interventions and abstraction.} Our swaps and
+rescues sit in the activation-patching lineage of causal mediation and
+tracing~\citep{vig2020causal, meng2022rome, wang2023ioi}, with the
+methodological cautions of \citet{zhang2024patching} in mind. The
+identification framing is the concern of causal
+abstraction~\citep{geiger2021causal} and distributed alignment
+search~\citep{geiger2024das}, and the preregistered-hypothesis ethos is
+causal scrubbing's~\citep{chan2022scrubbing}. Our P4 is an interchange
+intervention scored against an \emph{exact} causal model --- the
+analytic posterior --- which is the limit case those frameworks
+approximate when the high-level model must itself be hypothesized.
+
+\paragraph{Probing and its critique.} That decodable content need not
+be used is established: amnesic probing~\citep{elazar2021amnesic}
+demonstrated it with projection-removal, control tasks diagnose probe
+overcapacity~\citep{hewitt2019control}, and the survey
+of~\citet{belinkov2022probing} collects the genre; the removal
+machinery itself descends from INLP~\citep{ravfogel2020inlp} and
+LEACE~\citep{belrose2023leace}. Our contribution to this line is
+calibration against ground truth: the inert-but-decodable quantity is
+checked against an analytic posterior, and the lens's exclusion of it
+is measured rather than argued. Our P3 probe-promiscuity result is the
+same critique applied to ourselves.
+
+\paragraph{Ground-truth settings.} Compiled transformers
+(Tracr,~\citealt{lindner2023tracr}) and emergent world models
+(Othello-GPT,~\citealt{li2023othello}) also compare internal structure
+against known semantics. The wind tunnel's differentiator is that the
+models are \emph{trained}, not compiled, and the ground truth is a
+closed-form posterior rather than a board state, so calibration itself
+is checkable to fractions of a bit.
+
+\paragraph{Circuits, formation, and the nearest neighbor.} The
+residual-stream framework and induction-head account are the
+background picture~\citep{elhage2021framework, olsson2022induction};
+ablation-based indispensability carries the self-repair caveat of the
+Hydra effect~\citep{mcgrath2023hydra}, which our absolute
+frame-projected write metric partially answers. That structure forms
+before performance has precedent in grokking progress
+measures~\citep{nanda2023grokking}. The closest single precedent to
+routing-versus-content is the binding-ID result
+of~\citet{feng2023binding}: content-independent binding subspaces
+whose interchange redirects bindings. Our workspace stores one
+direction per live hypothesis, in contrast to
+superposition~\citep{elhage2022superposition}; whether that survives
+$V \gg d$ is open. That in-context learning is implicitly Bayesian was
+argued by~\citet{xie2022bayesian}; the wind tunnel makes it exact.
+
+\paragraph{Recurrent and state-space interpretability.}
+\citet{paulo2024rnns} find that transformer interpretability tools
+largely transfer to Mamba and RWKV at scale, and \citet{sharma2024mamba}
+edit factual associations in Mamba through residual interventions. Our
+Mamba result does not contradict either: next-token readouts and many
+behaviors remain residual-accessible; what our task isolates is
+\emph{evidence transport}, which in this regime runs through scan
+state. The reconciliation is a prediction: residual-stream methods
+should succeed on SSMs exactly where content is locally materialized
+and fail where it is carried in state.
+
+\paragraph{Global workspace theory.} We use ``workspace''
+operationally, following the production release, and make no contact
+with global workspace theory
+proper~\citep{baars1988cognitive, dehaene2011workspace} or its ML
+instantiations~\citep{goyal2022workspace, vanrullen2021workspace}:
+nothing here concerns broadcast, ignition, or access. If anything, P5
+cautions against workspace-detection arguments in that tradition's
+direction: the subspace can exist, correctly shaped, and confer
+nothing, so detecting a workspace licenses no inference to function.
 
 \section{Setup}
 
@@ -428,7 +517,9 @@ The dissociation half: the entropy-readout axis (fit by ridge
 regression; $R^2 = 1.00$, perfectly linearly decodable) changes
 calibration by $-0.001$ bits when projected out. Projecting out the frame
 costs $+0.75$ bits. Being readable and being used are different
-properties, measured causally --- and the lens agrees: the entropy
+properties, measured causally, as amnesic
+probing~\citep{elazar2021amnesic} first showed with projection
+removal --- and the lens agrees: the entropy
 axis's projection onto the top J-directions is at or below the
 random-direction baseline at every layer, so the use-weighted subspace
 excludes what the ablation shows to be inert; the frame--precision boundary result of
@@ -551,8 +642,10 @@ construction; position enters only through how those shared weights are
 \emph{used}, via content routed by attention. Gradient descent under a
 positional loss mask can therefore compile position-dependence only into
 the computation routed through the shared weights, never into the
-weights themselves: the geometry is global because nothing in the
-parameterization can make it local. ``Geometry global, writer computation
+weights themselves. One per-position parameter does exist, the learned
+positional embeddings, so this is an empirical regularity rather than a
+theorem: the positional pathway could in principle localize the
+geometry, and measurably does not dominate the frame. ``Geometry global, writer computation
 positional'' is then the expected signature of positional compilation in
 any weight-shared architecture, which is the thesis of
 \citet{misra2026nature}, now visible through the lens. (And yes, this is
@@ -718,11 +811,12 @@ residual-stream positional lens cannot see it.
 \paragraph{Reading.} The separation principle (routing substrate
 versus writer computation) holds in all three architectures. What is
 architecture-specific is the \emph{implementation of the routing side}:
-attention keeps the substrate as a frame-aligned positional subspace of
-the residual stream (its content-addressable keys require token
-coordinates); the LSTM keeps the same content at layer boundaries in a
-learned private code; Mamba keeps it in scan state, off the residual
-stream altogether. A practical implication for production
+attention in these models keeps the substrate as a frame-aligned
+positional subspace of the residual stream (an empirical regularity,
+not a necessity: QK maps can absorb any re-basing, and the untied
+control shows tying drives much of the token alignment); the LSTM keeps
+the same content at layer boundaries in a learned private code; Mamba
+keeps it in scan state, off the residual stream altogether. A practical implication for production
 interpretability follows: the J-lens finds workspaces where
 architectures keep content in positional residual subspaces, so on
 hybrid or SSM-based models the same analysis could report ``no
@@ -841,10 +935,15 @@ Second, the stated frontier of that literature is checking generalized
 identifiability in trained foundation models, where ground-truth
 latents are unavailable. The wind tunnel is the setting where they are
 available: P1 and P3 jointly verify, in a model with an analytic
-posterior, that the functional subspace the Jacobian identifies equals
-the generative latent structure it should identify. To our knowledge
-this is the first empirical case where the two notions can be computed
-independently and compared, and they coincide.
+posterior, that the functional subspace the Jacobian identifies matches
+the generative latent structure it should identify, up to the
+coordinate contingencies of \cref{sec:crossarch}. Ground-truth
+comparisons exist for probed representations (Othello-GPT,
+\citealt{li2023othello}) and compiled circuits
+(Tracr, \citealt{lindner2023tracr}); what we believe is new is the
+narrower Jacobian-side statement: a use-weighted functional subspace
+compared against an analytically known posterior structure, with the
+two computed independently.
 
 \paragraph{The one-sentence version.} Bayesian computation factorizes
 into a routing substrate and writer computation. The separation is
@@ -868,12 +967,17 @@ here are $2$--$3.6\times$, far from the ${\sim}100\times$ reported at
 production scale, consistent with a 6-layer model having little room for
 specialization, but unverified. The hypothesis space is single-token by
 construction, so the production-scale concern about concepts without
-single-token equivalents is untested here.
+single-token equivalents is untested here. And of the production
+definition's three workspace criteria (dense read/write, flexible
+cross-task reuse, causal necessity), only the third is fully exercised:
+cross-task reuse is untestable in a one-task model, and our
+read-connectivity ratios are far below theirs.
 
-\paragraph{Artifacts.} Code, per-cell grids, preregistration deviations,
-and all figures: \texttt{experiments/jlens/} in the wind-tunnel
-repository, pinned against \texttt{anthropics/jacobian-lens}
-\texttt{@581d3986}. The full study is reproducible in ${\sim}2$ GPU-hours
+\paragraph{Artifacts.} Code, per-cell grids, the verbatim
+prespecification (\texttt{PREREGISTRATION.md}, with an honest note on
+its dating), deviations, and all figures: \texttt{experiments/jlens/}
+in the wind-tunnel repository, pinned against
+\texttt{anthropics/jacobian-lens} \texttt{@581d3986}. The full study is reproducible in ${\sim}2$ GPU-hours
 on one consumer GPU.
 
 \bibliographystyle{plainnat}
