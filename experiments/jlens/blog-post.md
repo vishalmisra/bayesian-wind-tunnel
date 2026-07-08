@@ -10,14 +10,16 @@ card.*
 
 ![The workspace is fine. We lost the writers.](assets/blog-header-cartoon.png)
 
-Last week Anthropic published a striking result. Using a tool they call
+A couple of days ago Anthropic published a striking result. Using a tool they call
 the J-lens - Jacobians from internal activations to future output
 logits - they found a small, densely connected subspace inside
 production language models that holds reusable content the model
 actually uses. They call it a global workspace. The finding set off a
-wave of commentary, some of it about consciousness, most of it missing
-the more interesting question, which Anthropic themselves stated
-plainly: what decides what enters the workspace, and how does it form?
+wave of commentary, some of it about consciousness (we find below a
+perfectly intact workspace in a model that has provably stopped
+computing; make of that what you will), most of it missing the more
+interesting question, which Anthropic themselves stated plainly: what
+decides what enters the workspace, and how does it form?
 
 Before anything else, what the J-lens actually is. Two pieces of
 vocabulary.
@@ -296,7 +298,8 @@ need to be asked, and tested, separately.
 
 The note, the preregistration with both failures, the deviations log,
 and every experiment are in the repo. It all runs in an afternoon on
-one GPU. That was rather the point.
+one GPU. Most of it was, in fact, done on a flight from Hawaii to New
+York. That was rather the point.
 
 ---
 
