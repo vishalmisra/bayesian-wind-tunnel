@@ -30,7 +30,9 @@ verified causal role. What the content is, and how the workspace forms,
 cannot be checked at scale. We run the lens inside Bayesian wind
 tunnels, small transformers with an analytic posterior at every
 position, under five preregistered predictions. Three pass: the
-workspace is the hypothesis frame, its contents are the posterior's
+workspace is the hypothesis frame (in coordinates whose alignment
+weight tying and training seed modulate; the causal structure beneath
+is invariant), its contents are the posterior's
 surviving hypothesis set, and swapping its content redirects the model
 to the Bayes posterior of the swapped evidence, while the uncertainty
 readout riding on it is decodable and causally inert. Probing alone
@@ -150,7 +152,8 @@ test this). The controls and swaps distinguish these cases.
  & \textbf{Preregistered claim} & \textbf{Threshold} & \textbf{Outcome} \\
 \midrule
 P1 & \Jspace{} $=$ frame subspace & $\ge 3\times$ null; decode $\ge 90\%$ &
-  \textbf{Pass} ($4.8$--$6.8\times$; controls at null) \\
+  \textbf{Pass} on the production run ($4.8$--$6.8\times$; controls at
+  null; magnitude seed- and tying-dependent) \\
 P2 & Frame head dominates writing & $\ge 2\times$ every other head &
   \textbf{Fail} $\to$ 9-head bank, zero-overlap dichotomy \\
 P3 & Contents $=$ surviving set & $\ge 95\%$ (balanced) &

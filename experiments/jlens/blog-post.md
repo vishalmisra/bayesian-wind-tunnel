@@ -73,8 +73,15 @@ The identity checks came back stronger than we expected. The J-space
 coincides with the hypothesis frame at five to seven times the level of
 a matched random subspace. Two controls pin this down: the same
 architecture at random initialization shows nothing, and a trained
-attention-free MLP shows nothing. The alignment is learned, and it is
-not an artifact of the output embedding.
+attention-free MLP shows nothing. The alignment is learned. Two more
+controls, run at a referee's request, taught us what kind of fact it
+is: a model trained with untied embeddings computes the same posterior
+with much weaker token-frame alignment, and across training seeds the
+alignment varies severalfold. The coordinates are a choice the
+architecture and the training run make. What never varies, on any
+seed, is the structure underneath: the contents decode perfectly, the
+uncertainty direction is causally inert, and deleting the frame
+destroys the model's calibration.
 
 The contents check out too, but with a lesson attached. Linear probes
 on the workspace coordinates read off exactly which hypotheses the
