@@ -1,4 +1,4 @@
-# Anthropic found a workspace inside Claude. We found what workspaces are for.
+# Anthropic found a workspace inside Claude. We know what it is, and what it isn't.
 
 *Companion post for our working note ["The Workspace Survives Where the
 Circuit Dies: Routing Is Not
@@ -63,9 +63,13 @@ is a real object and not an artifact of the method, the lens should
 find it here. And here, unlike anywhere else, we can check what it
 finds against the truth.
 
-We preregistered five predictions with numeric thresholds before
-running anything. Three passed. The two that failed are the best
-results in the paper.
+We wrote down five predictions with numeric thresholds before looking
+at results. The note is candid about the dating: the protocol's public
+commit postdates the first runs, so it is an internal prespecification,
+not a timestamped preregistration. It also records where the gates held
+strictly and where they needed refinement. Three of the five passed.
+The two that failed were the two we would most have wanted to pass, and
+they are the best results in the paper.
 
 ## What the workspace is
 
@@ -175,12 +179,17 @@ and transplant it into a broken position. Accuracy goes from 0.19 to
 1.00. Everything downstream of the writers works fine, anywhere in the
 sequence. The failure is confined to the machinery that writes.
 
-Second, the converse. At positions where everything works, rotate the
-part of the residual stream orthogonal to the frame, and prediction
-collapses to chance. Rotate the frame coordinates themselves and
-almost nothing happens. Two transplants, two corruptions, four cells,
-one conclusion: the routing geometry and the computation that uses it
-are different objects, and they can be separated with a scalpel.
+Second, the converse. Rotate the part of the residual stream
+orthogonal to the frame and prediction collapses to chance at every
+depth. The frame tells a sharper story. Rotating it hurts exactly
+where evidence enters: at block 1 the frame rotation cuts accuracy
+roughly in half while a dimension-matched random rotation does
+nothing. By block 3 both are harmless, so the sparing at depth is a
+fact about dimension, not the frame. The frame is causally specific at
+the entry band and generic after it. The in-flight computation lives
+in the complement throughout. Transplants and corruptions agree: the
+routing geometry and the computation that uses it are different
+objects, and they can be separated with a scalpel.
 
 That is the sentence version of the paper. Routing is not computation.
 A model can carry a perfectly good workspace into positions where
@@ -246,10 +255,13 @@ sounds impossible until you remember the scan: by the time you patch
 position twenty, every layer's internal state has already absorbed the
 evidence while sweeping past it, and the patched scratchpads are not
 where that history lives. The evidence is not at positions; it is
-inside the scan states. Zero the states and the model loses
-everything. Swap the states with an evidence-matched donor and the
-posterior follows. The workspace exists there too, but it lives in
-state space, invisible to any positional lens.
+inside the scan states. Zero the scan states at the read boundary and
+the model loses everything: KL to the true posterior explodes from
+near zero to over 25 bits. The states carry the evidence.
+Transplanting an evidence-matched donor's states redirects the
+posterior on one of two seeds, so sufficiency is suggestive; necessity
+is settled. The workspace exists there too, but it lives in state
+space, where a positional residual-stream lens cannot reach it.
 
 That last finding is a caution for the field. Run the J-lens on a
 state-space or hybrid model and you may conclude there is no
