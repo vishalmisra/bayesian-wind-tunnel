@@ -100,6 +100,12 @@ def main() -> None:
     ap.add_argument("--donor", default=None)
     ap.add_argument("--transplant", choices=("frozen", "trainable"),
                     default=None)
+    ap.add_argument("--transplant-set", choices=("full", "routing-only"),
+                    default="full",
+                    help="routing-only transplants pos_emb + wq/wk but NOT "
+                         "tok_emb (and hence not the tied head), isolating "
+                         "whether frozen cross-task failure is the tied "
+                         "readout")
     ap.add_argument("--freeze-at", type=int, default=None)
     ap.add_argument("--sparse-after", type=int, default=None)
     ap.add_argument("--sparse-density", type=float, default=0.05)
@@ -127,13 +133,16 @@ def main() -> None:
         ck = torch.load(args.donor, map_location="cpu", weights_only=False)
         sd = ck.get("model", ck)
         sub = {k: v for k, v in sd.items() if is_substrate(k)}
+        if args.transplant_set == "routing-only":
+            sub = {k: v for k, v in sub.items()
+                   if not k.startswith("tok_emb.")}
         missing, unexpected = model.load_state_dict(sub, strict=False)
         assert not unexpected, unexpected
         print(f"transplanted {len(sub)} substrate tensors from donor",
               flush=True)
         if args.transplant == "frozen":
             for name, p in model.named_parameters():
-                if is_substrate(name):
+                if is_substrate(name) and name in sub:
                     p.requires_grad_(False)
 
     opt = torch.optim.AdamW(
