@@ -74,7 +74,7 @@ they are the best results in the paper.
 ## What the workspace is
 
 The identity checks came back stronger than we expected. The J-space
-coincides with the hypothesis frame at five to seven times the level of
+coincides with the hypothesis frame at roughly five to seven times the level of
 a matched random subspace. Two controls pin this down: the same
 architecture at random initialization shows nothing, and a trained
 attention-free MLP shows nothing. The alignment is learned. Two more
@@ -161,7 +161,8 @@ to the same anti-selection failure we just measured.
 We have a family of models trained with a deliberate handicap: loss
 only on the first five positions of a sequence. Our companion paper
 shows these models fall off a cliff past position five - calibrated to
-0.005 bits inside the horizon, off by more than a bit beyond it.
+hundredths of a bit inside the horizon, off by more than a bit beyond
+it.
 Gradient descent compiled a local circuit, not a reusable mechanism.
 
 We predicted the workspace would track the cliff: intact where the
@@ -189,7 +190,7 @@ fact about dimension, not the frame. The frame is causally specific at
 the entry band and generic after it. The in-flight computation lives
 in the complement throughout. Transplants and corruptions agree: the
 routing geometry and the computation that uses it are different
-objects, and they can be separated with a scalpel.
+objects.
 
 That is the sentence version of the paper. Routing is not computation.
 A model can carry a perfectly good workspace into positions where
@@ -285,7 +286,8 @@ The separation is general. The coordinates are architectural.
 
 And the corollary that matters beyond interpretability: having a
 workspace and being able to use it are different properties, requiring
-different evidence. A model can fail to generalize with its substrate
+different evidence. Readable is not the same as used; neither is
+present the same as functional. A model can fail to generalize with its substrate
 fully intact, because generalization lives in the writers. If that
 transfers to scale - and everything here is a 2.7M-parameter
 existence proof, so treat it as a hypothesis - then questions about
