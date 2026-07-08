@@ -2,7 +2,7 @@
 
 *Companion post for our working note ["The Workspace Survives Where the
 Circuit Dies: Routing Is Not
-Computation"](https://github.com/vishalmisra/bayesian-wind-tunnel/blob/feat/jlens-workspace/experiments/jlens/note/workspace-note.pdf)
+Computation"](https://github.com/vishalmisra/bayesian-wind-tunnel/blob/main/experiments/jlens/note/workspace-note.pdf)
 (Dalal, Misra, Parekh; arXiv pending). Code and all experiments:
 [bayesian-wind-tunnel](https://github.com/vishalmisra/bayesian-wind-tunnel).
 Everything below reproduces in about two GPU-hours on one consumer

@@ -9,6 +9,7 @@ This repository contains code to reproduce all experiments from three papers on 
 | **I** | The Bayesian Geometry of Transformer Attention | [2512.22471](https://arxiv.org/abs/2512.22471) |
 | **II** | Gradient Dynamics of Attention: How Cross-Entropy Sculpts Bayesian Manifolds | [2512.22473](https://arxiv.org/abs/2512.22473) |
 | **III** | Geometric Scaling of Bayesian Inference in LLMs | [2512.23752](https://arxiv.org/abs/2512.23752) |
+| **—** | The Workspace Survives Where the Circuit Dies: Routing Is Not Computation ([PDF](experiments/jlens/note/workspace-note.pdf), [code](experiments/jlens/)) | pending |
 
 ## Repository structure
 
