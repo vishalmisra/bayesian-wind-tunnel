@@ -285,6 +285,7 @@ tied unembedding.
 trained transformer & $4.8$--$6.8\times$ null & --- \\
 random-init transformer & $1.1$--$1.2\times$ & architecture / unembedding geometry \\
 trained MLP (2.68M, plateaued) & $0.9$--$1.2\times$ & training without in-context binding \\
+trained, untied embeddings & $1.5$--$1.9\times$ & frame coordinates without weight tying \\
 \bottomrule
 \end{tabular}
 \caption{P1 controls. The frame alignment requires \emph{trained
@@ -292,6 +293,22 @@ attention}: neither the architecture's geometry nor training per se
 produces it.}
 \label{tab:controls}
 \end{table}
+
+Two further controls, both referee-requested, bound the identity
+claim. An \emph{untied-embedding} transformer trained to calibration
+($0.017$ bits) shows frame alignment of only $1.5$--$1.9\times$ at
+every layer: the strong token-frame coordinates of the production
+model are in substantial part a product of weight tying. And across
+training seeds the magnitude varies widely ($2.3$--$6.1\times$ at the
+embedding band; all above null, not all above the $3\times$ gate), with
+causal swap margins scaling accordingly ($+1.0$ to $+8.2$ bits). What
+is seed- and tying-invariant is the structure underneath: contents
+decode at $1.000$ on every seed, the entropy axis is causally inert on
+every seed, and projecting out the frame destroys calibration on every
+seed ($+1.05$ to $+1.06$ bits). The identification should therefore be
+read at two levels: the separation structure is invariant; the degree
+of externalization into token coordinates is contingent, on tying, on
+seed, and (\cref{sec:crossarch}) on architecture.
 
 Two refinements against the strict preregistration. First, the frame
 operationalization that carries the identity is the \emph{token-identity}
@@ -345,7 +362,12 @@ plus L1H0/H1/H3) separate from the remaining 27 with zero overlap:
 minimum $2.06$ among the indispensable, maximum $0.75$ among the rest.
 Writer magnitude into the workspace \emph{is} indispensability, as a
 dichotomy (Spearman $\rho = 0.47$, $p = 0.004$ on the continuous
-ranking; the within-group ordering carries no signal). A methodological
+ranking; the within-group ordering carries no signal). The dichotomy
+\emph{property} replicates on two further training seeds (clean
+zero-overlap separation on both), while the writer-set composition does
+not: the replication seeds recruit larger banks reaching into blocks 2
+and 3. Which heads write is contingent; that writers separate cleanly
+from non-writers is not. A methodological
 caution for the production-scale analysis falls out of the failure: the
 scale-free ratio $\lVert P_J w \rVert / \lVert w \rVert$ is gamed by
 near-dead heads whose tiny writes happen to point at the workspace
@@ -835,7 +857,10 @@ late-layer \Jspace{} is structurally degenerate for strictly-future
 targets, so depth claims are confined to early/mid layers. The
 identification threshold ($3\times$ null) was preregistered but the frame
 mode that carries it (token-identity rather than head-pullback) was a
-within-family refinement; we report all modes. Read-connectivity ratios
+within-family refinement; we report all modes, and the referee controls
+show the threshold is not universally met across training seeds (the
+alignment magnitude is seed- and tying-dependent even though the
+underlying causal structure is not). Read-connectivity ratios
 here are $2$--$3.6\times$, far from the ${\sim}100\times$ reported at
 production scale, consistent with a 6-layer model having little room for
 specialization, but unverified. The hypothesis space is single-token by
