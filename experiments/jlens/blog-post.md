@@ -36,11 +36,11 @@ they move a lot. The J-lens computes this sensitivity exactly (it is a
 matrix of derivatives, a Jacobian), and the J-space is the span of the
 few directions the future actually depends on. That is the workspace:
 not everything on the scratchpad, just the part the model goes on to
-use. This is the lens's real innovation, and it is worth pausing on:
-it defines internal content by use, not presence. A probe finds
-whatever is decodable, whether or not the model ever reads it. The
-J-lens finds what the computation runs through. Our results will show
-those are not the same thing - and we measure the difference directly.
+use. That is the lens's real innovation: it defines internal content
+by use, not presence. A probe finds whatever is decodable, whether or
+not the model ever reads it. The J-lens finds what the computation
+runs through. Those are not the same thing, and we measure the
+difference directly.
 
 They cannot answer the formation question at production scale, and
 neither can anyone else. A frontier model has no ground truth. You can find a
