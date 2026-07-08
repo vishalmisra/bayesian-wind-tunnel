@@ -1,0 +1,296 @@
+{
+  "config": {
+    "checkpoints": [
+      "logs/bijection_v20_dense/ckpt_step100.pt",
+      "logs/bijection_v20_dense/ckpt_step200.pt",
+      "logs/bijection_v20_dense/ckpt_step300.pt",
+      "logs/bijection_v20_dense/ckpt_step400.pt",
+      "logs/bijection_v20_dense/ckpt_step500.pt",
+      "logs/bijection_v20_dense/ckpt_step600.pt",
+      "logs/bijection_v20_dense/ckpt_step700.pt",
+      "logs/bijection_v20_dense/ckpt_step800.pt",
+      "logs/bijection_v20_dense/ckpt_step900.pt",
+      "logs/bijection_v20_dense/ckpt_step1000.pt",
+      "logs/bijection_v20_dense/ckpt_step1500.pt",
+      "logs/bijection_v20_dense/ckpt_step2000.pt",
+      "logs/bijection_v20_dense/ckpt_step2500.pt",
+      "logs/bijection_v20_dense/ckpt_step3000.pt",
+      "logs/bijection_v20_dense/ckpt_step3500.pt",
+      "logs/bijection_v20_dense/ckpt_step4000.pt",
+      "logs/bijection_v20_dense/ckpt_step4500.pt",
+      "logs/bijection_v20_dense/ckpt_step5000.pt",
+      "logs/bijection_v20_dense/ckpt_step6000.pt",
+      "logs/bijection_v20_dense/ckpt_step7000.pt",
+      "logs/bijection_v20_dense/ckpt_step8000.pt",
+      "logs/bijection_v20_dense/ckpt_step9000.pt",
+      "logs/bijection_v20_dense/ckpt_step10000.pt",
+      "logs/bijection_v20_dense/ckpt_step15000.pt",
+      "logs/bijection_v20_dense/ckpt_step20000.pt",
+      "logs/bijection_v20_dense/ckpt_step25000.pt",
+      "logs/bijection_v20_dense/ckpt_step30000.pt",
+      "logs/bijection_v20_dense/ckpt_step35000.pt",
+      "logs/bijection_v20_dense/ckpt_step40000.pt",
+      "logs/bijection_v20_dense/ckpt_step45000.pt"
+    ],
+    "final_checkpoint": "logs/bijection_v20_dense/ckpt_step50000.pt",
+    "out": "experiments/jlens/artifacts/phase5_dense",
+    "n_seq": 256,
+    "seq_chunk": 64,
+    "V": 20,
+    "L": 19,
+    "seed": 444,
+    "n_nulls": 500,
+    "device": "cuda"
+  },
+  "null_mean": 0.1040970025062561,
+  "trajectory": [
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step100.pt",
+      "step": 100,
+      "calibration_mae_bits": 2.8245608806610107,
+      "frame_ratio_to_null": 1.017009266957635,
+      "jspace_overlap_with_final": 0.06839070676101579,
+      "elim_balanced_acc_mid": 0.5076932627872395
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step200.pt",
+      "step": 200,
+      "calibration_mae_bits": 0.7777886390686035,
+      "frame_ratio_to_null": 1.0243266949302077,
+      "jspace_overlap_with_final": 0.06661675684154034,
+      "elim_balanced_acc_mid": 0.4998025619059077
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step300.pt",
+      "step": 300,
+      "calibration_mae_bits": 1.0435785055160522,
+      "frame_ratio_to_null": 2.263544628211804,
+      "jspace_overlap_with_final": 0.09393793592850368,
+      "elim_balanced_acc_mid": 0.5367004552843365
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step400.pt",
+      "step": 400,
+      "calibration_mae_bits": 0.9125317931175232,
+      "frame_ratio_to_null": 3.648768634080296,
+      "jspace_overlap_with_final": 0.12775885520709884,
+      "elim_balanced_acc_mid": 0.5530279596656815
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step500.pt",
+      "step": 500,
+      "calibration_mae_bits": 0.6487599611282349,
+      "frame_ratio_to_null": 4.216615927255973,
+      "jspace_overlap_with_final": 0.15784010001354748,
+      "elim_balanced_acc_mid": 0.5853038634596567
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step600.pt",
+      "step": 600,
+      "calibration_mae_bits": 0.3521897494792938,
+      "frame_ratio_to_null": 4.608379594486117,
+      "jspace_overlap_with_final": 0.19469530218177372,
+      "elim_balanced_acc_mid": 0.6222921421186395
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step700.pt",
+      "step": 700,
+      "calibration_mae_bits": 0.20069825649261475,
+      "frame_ratio_to_null": 4.910274854783368,
+      "jspace_overlap_with_final": 0.24510755803849962,
+      "elim_balanced_acc_mid": 0.6320366647778808
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step800.pt",
+      "step": 800,
+      "calibration_mae_bits": 0.14196999371051788,
+      "frame_ratio_to_null": 5.125699474317269,
+      "jspace_overlap_with_final": 0.2713247165083885,
+      "elim_balanced_acc_mid": 0.6347694488037176
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step900.pt",
+      "step": 900,
+      "calibration_mae_bits": 0.11497773975133896,
+      "frame_ratio_to_null": 5.312023859914965,
+      "jspace_overlap_with_final": 0.2916841291719013,
+      "elim_balanced_acc_mid": 0.6557731759845152
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step1000.pt",
+      "step": 1000,
+      "calibration_mae_bits": 0.0860348790884018,
+      "frame_ratio_to_null": 5.445054828851139,
+      "jspace_overlap_with_final": 0.30623102974560523,
+      "elim_balanced_acc_mid": 0.6613247952121071
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step1500.pt",
+      "step": 1500,
+      "calibration_mae_bits": 0.06473058462142944,
+      "frame_ratio_to_null": 5.947956700379821,
+      "jspace_overlap_with_final": 0.3661627711521255,
+      "elim_balanced_acc_mid": 0.7330855829004195
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step2000.pt",
+      "step": 2000,
+      "calibration_mae_bits": 0.04336736723780632,
+      "frame_ratio_to_null": 6.2394492859976864,
+      "jspace_overlap_with_final": 0.4035969575246175,
+      "elim_balanced_acc_mid": 0.7744514673383188
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step2500.pt",
+      "step": 2500,
+      "calibration_mae_bits": 0.03161764517426491,
+      "frame_ratio_to_null": 6.317339861786931,
+      "jspace_overlap_with_final": 0.44482091814279556,
+      "elim_balanced_acc_mid": 0.8013873912697349
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step3000.pt",
+      "step": 3000,
+      "calibration_mae_bits": 0.03692576289176941,
+      "frame_ratio_to_null": 6.208094425070398,
+      "jspace_overlap_with_final": 0.47546109474367565,
+      "elim_balanced_acc_mid": 0.7887714876952283
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step3500.pt",
+      "step": 3500,
+      "calibration_mae_bits": 0.036263853311538696,
+      "frame_ratio_to_null": 6.202496173241079,
+      "jspace_overlap_with_final": 0.4996876898739073,
+      "elim_balanced_acc_mid": 0.7925654405962685
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step4000.pt",
+      "step": 4000,
+      "calibration_mae_bits": 0.021537408232688904,
+      "frame_ratio_to_null": 6.27480203253383,
+      "jspace_overlap_with_final": 0.5101162269711494,
+      "elim_balanced_acc_mid": 0.7887495862811702
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step4500.pt",
+      "step": 4500,
+      "calibration_mae_bits": 0.01828138157725334,
+      "frame_ratio_to_null": 6.328316714509815,
+      "jspace_overlap_with_final": 0.5214427014191946,
+      "elim_balanced_acc_mid": 0.7911538259381083
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step5000.pt",
+      "step": 5000,
+      "calibration_mae_bits": 0.022569194436073303,
+      "frame_ratio_to_null": 6.3501372774513705,
+      "jspace_overlap_with_final": 0.5304694010151757,
+      "elim_balanced_acc_mid": 0.787047821215154
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step6000.pt",
+      "step": 6000,
+      "calibration_mae_bits": 0.012482213787734509,
+      "frame_ratio_to_null": 6.430256173016075,
+      "jspace_overlap_with_final": 0.5555911751257049,
+      "elim_balanced_acc_mid": 0.7675087639428896
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step7000.pt",
+      "step": 7000,
+      "calibration_mae_bits": 0.010106923058629036,
+      "frame_ratio_to_null": 3.192368002873146,
+      "jspace_overlap_with_final": 0.3247157194548183,
+      "elim_balanced_acc_mid": 0.7652346801096284
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step8000.pt",
+      "step": 8000,
+      "calibration_mae_bits": 0.018733423203229904,
+      "frame_ratio_to_null": 4.989586211078697,
+      "jspace_overlap_with_final": 0.5361637439992692,
+      "elim_balanced_acc_mid": 0.7651776031723572
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step9000.pt",
+      "step": 9000,
+      "calibration_mae_bits": 0.01243862509727478,
+      "frame_ratio_to_null": 3.897385631403863,
+      "jspace_overlap_with_final": 0.4004425116711193,
+      "elim_balanced_acc_mid": 0.7641931529982514
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step10000.pt",
+      "step": 10000,
+      "calibration_mae_bits": 0.009328275918960571,
+      "frame_ratio_to_null": 5.0198887038550675,
+      "jspace_overlap_with_final": 0.5098732983072599,
+      "elim_balanced_acc_mid": 0.7629707743289224
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step15000.pt",
+      "step": 15000,
+      "calibration_mae_bits": 0.005645750090479851,
+      "frame_ratio_to_null": 6.231028201539751,
+      "jspace_overlap_with_final": 0.6388239537676176,
+      "elim_balanced_acc_mid": 0.7603934643352837
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step20000.pt",
+      "step": 20000,
+      "calibration_mae_bits": 0.005036161746829748,
+      "frame_ratio_to_null": 6.410412913842156,
+      "jspace_overlap_with_final": 0.6865044666661156,
+      "elim_balanced_acc_mid": 0.7676635163688912
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step25000.pt",
+      "step": 25000,
+      "calibration_mae_bits": 0.003599434392526746,
+      "frame_ratio_to_null": 5.749043819045622,
+      "jspace_overlap_with_final": 0.6651395989788903,
+      "elim_balanced_acc_mid": 0.7623204750523421
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step30000.pt",
+      "step": 30000,
+      "calibration_mae_bits": 0.003155390964820981,
+      "frame_ratio_to_null": 5.877938821301345,
+      "jspace_overlap_with_final": 0.708939902484417,
+      "elim_balanced_acc_mid": 0.7613978815389327
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step35000.pt",
+      "step": 35000,
+      "calibration_mae_bits": 0.0021621035411953926,
+      "frame_ratio_to_null": 5.734379128904768,
+      "jspace_overlap_with_final": 0.7807710443933805,
+      "elim_balanced_acc_mid": 0.7515884820813802
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step40000.pt",
+      "step": 40000,
+      "calibration_mae_bits": 0.0013787247007712722,
+      "frame_ratio_to_null": 5.5516597941124,
+      "jspace_overlap_with_final": 0.8404008713033464,
+      "elim_balanced_acc_mid": 0.7662264080030822
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step45000.pt",
+      "step": 45000,
+      "calibration_mae_bits": 0.0008961590938270092,
+      "frame_ratio_to_null": 5.63673461759513,
+      "jspace_overlap_with_final": 0.9181290732489692,
+      "elim_balanced_acc_mid": 0.7623251218010191
+    },
+    {
+      "checkpoint": "logs/bijection_v20_dense/ckpt_step50000.pt",
+      "step": 50000,
+      "calibration_mae_bits": 0.0007828348316252232,
+      "frame_ratio_to_null": 5.635254717427338,
+      "jspace_overlap_with_final": 0.9999999917215772,
+      "elim_balanced_acc_mid": 0.765606596748834
+    }
+  ]
+}

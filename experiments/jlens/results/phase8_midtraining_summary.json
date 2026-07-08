@@ -1,0 +1,112 @@
+{
+  "config": {
+    "checkpoint_dir": "logs/bijection_v20_dense",
+    "out": "experiments/jlens/artifacts/phase8_midtraining",
+    "n_pairs": 128,
+    "n_seq": 256,
+    "V": 20,
+    "L": 19,
+    "seed": 987,
+    "device": "cuda"
+  },
+  "rows": [
+    {
+      "step": 100,
+      "calibration_mae": 2.8281328678131104,
+      "frame_swap_margin_bits": 0.34615417569875717,
+      "mae_rotate_frame_block0": 2.8337955474853516,
+      "mae_rotate_complement_block0": 2.916536808013916
+    },
+    {
+      "step": 200,
+      "calibration_mae": 0.779216468334198,
+      "frame_swap_margin_bits": 0.1283503882586956,
+      "mae_rotate_frame_block0": 1.841066837310791,
+      "mae_rotate_complement_block0": 2.074319839477539
+    },
+    {
+      "step": 300,
+      "calibration_mae": 1.0432857275009155,
+      "frame_swap_margin_bits": 0.27672572433948517,
+      "mae_rotate_frame_block0": 1.3273106813430786,
+      "mae_rotate_complement_block0": 1.7240865230560303
+    },
+    {
+      "step": 400,
+      "calibration_mae": 0.9118767976760864,
+      "frame_swap_margin_bits": 0.8415203392505646,
+      "mae_rotate_frame_block0": 1.547631859779358,
+      "mae_rotate_complement_block0": 1.9698911905288696
+    },
+    {
+      "step": 500,
+      "calibration_mae": 0.6460816264152527,
+      "frame_swap_margin_bits": 1.9198224544525146,
+      "mae_rotate_frame_block0": 1.8162769079208374,
+      "mae_rotate_complement_block0": 2.2172319889068604
+    },
+    {
+      "step": 600,
+      "calibration_mae": 0.34233593940734863,
+      "frame_swap_margin_bits": 3.3454567193984985,
+      "mae_rotate_frame_block0": 1.9824177026748657,
+      "mae_rotate_complement_block0": 2.370526075363159
+    },
+    {
+      "step": 800,
+      "calibration_mae": 0.14143624901771545,
+      "frame_swap_margin_bits": 4.80493688583374,
+      "mae_rotate_frame_block0": 1.9291390180587769,
+      "mae_rotate_complement_block0": 2.3371195793151855
+    },
+    {
+      "step": 1000,
+      "calibration_mae": 0.08363274484872818,
+      "frame_swap_margin_bits": 5.422029614448547,
+      "mae_rotate_frame_block0": 1.8202763795852661,
+      "mae_rotate_complement_block0": 2.249934196472168
+    },
+    {
+      "step": 2000,
+      "calibration_mae": 0.042223237454891205,
+      "frame_swap_margin_bits": 6.407366037368774,
+      "mae_rotate_frame_block0": 1.0223976373672485,
+      "mae_rotate_complement_block0": 1.3408185243606567
+    },
+    {
+      "step": 3000,
+      "calibration_mae": 0.03556773439049721,
+      "frame_swap_margin_bits": 6.855927467346191,
+      "mae_rotate_frame_block0": 0.6430723071098328,
+      "mae_rotate_complement_block0": 0.7842472791671753
+    },
+    {
+      "step": 5000,
+      "calibration_mae": 0.02215150184929371,
+      "frame_swap_margin_bits": 7.123980760574341,
+      "mae_rotate_frame_block0": 0.5049266219139099,
+      "mae_rotate_complement_block0": 0.6075343489646912
+    },
+    {
+      "step": 10000,
+      "calibration_mae": 0.009416935034096241,
+      "frame_swap_margin_bits": 7.725888252258301,
+      "mae_rotate_frame_block0": 0.5559657216072083,
+      "mae_rotate_complement_block0": 0.4183364510536194
+    },
+    {
+      "step": 30000,
+      "calibration_mae": 0.0031073049176484346,
+      "frame_swap_margin_bits": 9.022932529449463,
+      "mae_rotate_frame_block0": 0.5605652928352356,
+      "mae_rotate_complement_block0": 0.1719418615102768
+    },
+    {
+      "step": 50000,
+      "calibration_mae": 0.0007751237135380507,
+      "frame_swap_margin_bits": 11.517492532730103,
+      "mae_rotate_frame_block0": 0.5778472423553467,
+      "mae_rotate_complement_block0": 0.25031131505966187
+    }
+  ]
+}

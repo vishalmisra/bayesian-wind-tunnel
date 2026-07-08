@@ -1,0 +1,356 @@
+{
+  "models": [
+    {
+      "checkpoint": "<companion-repo>/results/extrapolation/horizon_integer_seed42/best_model.pt",
+      "baseline_acc": 1.0,
+      "detail": {
+        "q3": {
+          "none": {
+            "acc": 1.0
+          },
+          "rotate_full@1": {
+            "acc": 0.0859375,
+            "entropy_bits": 3.923168182373047
+          },
+          "rotate_complement@1": {
+            "acc": 0.318359375,
+            "entropy_bits": 3.1168041229248047
+          },
+          "rotate_frame@1": {
+            "acc": 0.345703125,
+            "entropy_bits": 3.851807117462158
+          },
+          "rotate_full@2": {
+            "acc": 0.06640625,
+            "entropy_bits": 3.977144241333008
+          },
+          "rotate_complement@2": {
+            "acc": 0.16015625,
+            "entropy_bits": 3.5966577529907227
+          },
+          "rotate_frame@2": {
+            "acc": 0.728515625,
+            "entropy_bits": 3.5784506797790527
+          },
+          "rotate_full@3": {
+            "acc": 0.09765625,
+            "entropy_bits": 3.9691052436828613
+          },
+          "rotate_complement@3": {
+            "acc": 0.1640625,
+            "entropy_bits": 3.633413314819336
+          },
+          "rotate_frame@3": {
+            "acc": 0.990234375,
+            "entropy_bits": 3.2329185009002686
+          }
+        },
+        "q4": {
+          "none": {
+            "acc": 1.0
+          },
+          "rotate_full@1": {
+            "acc": 0.052734375,
+            "entropy_bits": 3.974848508834839
+          },
+          "rotate_complement@1": {
+            "acc": 0.349609375,
+            "entropy_bits": 2.186825752258301
+          },
+          "rotate_frame@1": {
+            "acc": 0.416015625,
+            "entropy_bits": 3.7195727825164795
+          },
+          "rotate_full@2": {
+            "acc": 0.05859375,
+            "entropy_bits": 4.018730640411377
+          },
+          "rotate_complement@2": {
+            "acc": 0.1640625,
+            "entropy_bits": 3.2302913665771484
+          },
+          "rotate_frame@2": {
+            "acc": 0.7734375,
+            "entropy_bits": 3.2999606132507324
+          },
+          "rotate_full@3": {
+            "acc": 0.078125,
+            "entropy_bits": 3.9874632358551025
+          },
+          "rotate_complement@3": {
+            "acc": 0.123046875,
+            "entropy_bits": 2.9761362075805664
+          },
+          "rotate_frame@3": {
+            "acc": 0.99609375,
+            "entropy_bits": 2.7058653831481934
+          }
+        }
+      }
+    },
+    {
+      "checkpoint": "<companion-repo>/results/extrapolation/horizon_integer_seed1337/best_model.pt",
+      "baseline_acc": 1.0,
+      "detail": {
+        "q3": {
+          "none": {
+            "acc": 1.0
+          },
+          "rotate_full@1": {
+            "acc": 0.1015625,
+            "entropy_bits": 3.9024007320404053
+          },
+          "rotate_complement@1": {
+            "acc": 0.3359375,
+            "entropy_bits": 2.770845413208008
+          },
+          "rotate_frame@1": {
+            "acc": 0.470703125,
+            "entropy_bits": 3.460897445678711
+          },
+          "rotate_full@2": {
+            "acc": 0.0859375,
+            "entropy_bits": 3.9551126956939697
+          },
+          "rotate_complement@2": {
+            "acc": 0.162109375,
+            "entropy_bits": 3.033736228942871
+          },
+          "rotate_frame@2": {
+            "acc": 0.779296875,
+            "entropy_bits": 3.0107455253601074
+          },
+          "rotate_full@3": {
+            "acc": 0.044921875,
+            "entropy_bits": 3.9640274047851562
+          },
+          "rotate_complement@3": {
+            "acc": 0.099609375,
+            "entropy_bits": 3.3455801010131836
+          },
+          "rotate_frame@3": {
+            "acc": 0.982421875,
+            "entropy_bits": 2.3739495277404785
+          }
+        },
+        "q4": {
+          "none": {
+            "acc": 1.0
+          },
+          "rotate_full@1": {
+            "acc": 0.11328125,
+            "entropy_bits": 3.753984212875366
+          },
+          "rotate_complement@1": {
+            "acc": 0.388671875,
+            "entropy_bits": 2.1790618896484375
+          },
+          "rotate_frame@1": {
+            "acc": 0.60546875,
+            "entropy_bits": 3.1163852214813232
+          },
+          "rotate_full@2": {
+            "acc": 0.083984375,
+            "entropy_bits": 3.8441224098205566
+          },
+          "rotate_complement@2": {
+            "acc": 0.13671875,
+            "entropy_bits": 2.7159299850463867
+          },
+          "rotate_frame@2": {
+            "acc": 0.87109375,
+            "entropy_bits": 2.4355013370513916
+          },
+          "rotate_full@3": {
+            "acc": 0.046875,
+            "entropy_bits": 3.9054839611053467
+          },
+          "rotate_complement@3": {
+            "acc": 0.08203125,
+            "entropy_bits": 2.531289577484131
+          },
+          "rotate_frame@3": {
+            "acc": 0.994140625,
+            "entropy_bits": 1.6070510149002075
+          }
+        }
+      }
+    },
+    {
+      "checkpoint": "<companion-repo>/results/extrapolation/horizon_integer_seed2024/best_model.pt",
+      "baseline_acc": 1.0,
+      "detail": {
+        "q3": {
+          "none": {
+            "acc": 1.0
+          },
+          "rotate_full@1": {
+            "acc": 0.09765625,
+            "entropy_bits": 3.8957881927490234
+          },
+          "rotate_complement@1": {
+            "acc": 0.359375,
+            "entropy_bits": 2.940347194671631
+          },
+          "rotate_frame@1": {
+            "acc": 0.4140625,
+            "entropy_bits": 3.645766496658325
+          },
+          "rotate_full@2": {
+            "acc": 0.068359375,
+            "entropy_bits": 3.9090089797973633
+          },
+          "rotate_complement@2": {
+            "acc": 0.150390625,
+            "entropy_bits": 3.3747718334198
+          },
+          "rotate_frame@2": {
+            "acc": 0.71875,
+            "entropy_bits": 3.3944201469421387
+          },
+          "rotate_full@3": {
+            "acc": 0.068359375,
+            "entropy_bits": 3.9340264797210693
+          },
+          "rotate_complement@3": {
+            "acc": 0.123046875,
+            "entropy_bits": 3.270414352416992
+          },
+          "rotate_frame@3": {
+            "acc": 0.970703125,
+            "entropy_bits": 3.0344254970550537
+          }
+        },
+        "q4": {
+          "none": {
+            "acc": 1.0
+          },
+          "rotate_full@1": {
+            "acc": 0.05859375,
+            "entropy_bits": 4.011335372924805
+          },
+          "rotate_complement@1": {
+            "acc": 0.353515625,
+            "entropy_bits": 1.905346155166626
+          },
+          "rotate_frame@1": {
+            "acc": 0.505859375,
+            "entropy_bits": 3.246821880340576
+          },
+          "rotate_full@2": {
+            "acc": 0.05078125,
+            "entropy_bits": 3.967750072479248
+          },
+          "rotate_complement@2": {
+            "acc": 0.140625,
+            "entropy_bits": 3.156491756439209
+          },
+          "rotate_frame@2": {
+            "acc": 0.7734375,
+            "entropy_bits": 2.6749863624572754
+          },
+          "rotate_full@3": {
+            "acc": 0.048828125,
+            "entropy_bits": 3.8516337871551514
+          },
+          "rotate_complement@3": {
+            "acc": 0.1171875,
+            "entropy_bits": 2.4358434677124023
+          },
+          "rotate_frame@3": {
+            "acc": 0.984375,
+            "entropy_bits": 1.9645535945892334
+          }
+        }
+      }
+    },
+    {
+      "checkpoint": "<companion-repo>/results/recurrence/integer/seed_42/best_model.pt",
+      "baseline_acc": 1.0,
+      "detail": {
+        "q3": {
+          "none": {
+            "acc": 1.0
+          },
+          "rotate_full@1": {
+            "acc": 0.078125,
+            "entropy_bits": 4.056141376495361
+          },
+          "rotate_complement@1": {
+            "acc": 0.525390625,
+            "entropy_bits": 3.1191086769104004
+          },
+          "rotate_frame@1": {
+            "acc": 0.48828125,
+            "entropy_bits": 3.6688482761383057
+          },
+          "rotate_full@2": {
+            "acc": 0.068359375,
+            "entropy_bits": 4.030306816101074
+          },
+          "rotate_complement@2": {
+            "acc": 0.146484375,
+            "entropy_bits": 3.864619731903076
+          },
+          "rotate_frame@2": {
+            "acc": 0.73828125,
+            "entropy_bits": 3.1456027030944824
+          },
+          "rotate_full@3": {
+            "acc": 0.0703125,
+            "entropy_bits": 4.00649881362915
+          },
+          "rotate_complement@3": {
+            "acc": 0.09375,
+            "entropy_bits": 3.7766528129577637
+          },
+          "rotate_frame@3": {
+            "acc": 0.9765625,
+            "entropy_bits": 2.5298690795898438
+          }
+        },
+        "q4": {
+          "none": {
+            "acc": 1.0
+          },
+          "rotate_full@1": {
+            "acc": 0.09375,
+            "entropy_bits": 4.055708885192871
+          },
+          "rotate_complement@1": {
+            "acc": 0.5859375,
+            "entropy_bits": 2.1588778495788574
+          },
+          "rotate_frame@1": {
+            "acc": 0.48046875,
+            "entropy_bits": 3.4632349014282227
+          },
+          "rotate_full@2": {
+            "acc": 0.046875,
+            "entropy_bits": 4.023458480834961
+          },
+          "rotate_complement@2": {
+            "acc": 0.162109375,
+            "entropy_bits": 3.336935043334961
+          },
+          "rotate_frame@2": {
+            "acc": 0.7265625,
+            "entropy_bits": 2.640361785888672
+          },
+          "rotate_full@3": {
+            "acc": 0.076171875,
+            "entropy_bits": 3.9869282245635986
+          },
+          "rotate_complement@3": {
+            "acc": 0.09375,
+            "entropy_bits": 3.544928550720215
+          },
+          "rotate_frame@3": {
+            "acc": 0.986328125,
+            "entropy_bits": 1.548500895500183
+          }
+        }
+      }
+    }
+  ]
+}

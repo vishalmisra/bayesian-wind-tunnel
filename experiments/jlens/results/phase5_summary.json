@@ -1,0 +1,71 @@
+{
+  "config": {
+    "checkpoints": [
+      "logs/bijection_v20_repl/ckpt_step10000.pt",
+      "logs/bijection_v20_repl/ckpt_step20000.pt",
+      "logs/bijection_v20_repl/ckpt_step30000.pt",
+      "logs/bijection_v20_repl/ckpt_step40000.pt",
+      "logs/bijection_v20_repl/ckpt_step50000.pt"
+    ],
+    "final_checkpoint": "logs/bijection_v20_repl/ckpt_final.pt",
+    "out": "experiments/jlens/artifacts/phase5",
+    "n_seq": 256,
+    "seq_chunk": 64,
+    "V": 20,
+    "L": 19,
+    "seed": 444,
+    "n_nulls": 500,
+    "device": "cuda"
+  },
+  "null_mean": 0.10401360972225666,
+  "trajectory": [
+    {
+      "checkpoint": "logs/bijection_v20_repl/ckpt_step10000.pt",
+      "step": 10000,
+      "calibration_mae_bits": 0.01641879230737686,
+      "frame_ratio_to_null": 3.7386240759420537,
+      "jspace_overlap_with_final": 0.7241784864001803,
+      "elim_balanced_acc_mid": 0.9102244523971674
+    },
+    {
+      "checkpoint": "logs/bijection_v20_repl/ckpt_step20000.pt",
+      "step": 20000,
+      "calibration_mae_bits": 0.010218477807939053,
+      "frame_ratio_to_null": 4.4722434670133895,
+      "jspace_overlap_with_final": 0.8542230493492551,
+      "elim_balanced_acc_mid": 0.9133599002077277
+    },
+    {
+      "checkpoint": "logs/bijection_v20_repl/ckpt_step30000.pt",
+      "step": 30000,
+      "calibration_mae_bits": 0.008794235065579414,
+      "frame_ratio_to_null": 4.890975855882121,
+      "jspace_overlap_with_final": 0.9734580847952101,
+      "elim_balanced_acc_mid": 0.9330912165692833
+    },
+    {
+      "checkpoint": "logs/bijection_v20_repl/ckpt_step40000.pt",
+      "step": 40000,
+      "calibration_mae_bits": 0.007674573455005884,
+      "frame_ratio_to_null": 4.944878393361348,
+      "jspace_overlap_with_final": 0.9955646114216911,
+      "elim_balanced_acc_mid": 0.9437885646488017
+    },
+    {
+      "checkpoint": "logs/bijection_v20_repl/ckpt_step50000.pt",
+      "step": 50000,
+      "calibration_mae_bits": 0.006758388597518206,
+      "frame_ratio_to_null": 4.964229858479693,
+      "jspace_overlap_with_final": 0.999999988410208,
+      "elim_balanced_acc_mid": 0.9493280116927234
+    },
+    {
+      "checkpoint": "logs/bijection_v20_repl/ckpt_final.pt",
+      "step": 1000000000,
+      "calibration_mae_bits": 0.006758388597518206,
+      "frame_ratio_to_null": 4.964229858479693,
+      "jspace_overlap_with_final": 0.999999988410208,
+      "elim_balanced_acc_mid": 0.9493280116927234
+    }
+  ]
+}

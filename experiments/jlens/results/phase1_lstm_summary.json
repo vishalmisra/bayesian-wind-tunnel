@@ -1,0 +1,118 @@
+{
+  "config": {
+    "checkpoint": "logs/lstm_bijection_seed7777/ckpt_final.pt",
+    "out": "experiments/jlens/artifacts/phase1_lstm",
+    "n_seq": 512,
+    "seq_chunk": 16,
+    "V": 20,
+    "L": 19,
+    "min_horizon": 1,
+    "seed": 777,
+    "n_nulls": 1000,
+    "probe_rank": 16,
+    "device": "cuda",
+    "reuse_gram": false
+  },
+  "format": "sepvocab",
+  "is_mlp_control": true,
+  "frame": {
+    "calibration_mae_bits": 0.009167911484837532
+  },
+  "null_stats": {
+    "r4_embedding": {
+      "projection": [
+        0.10451474351808429,
+        0.015720806387159156
+      ],
+      "cka": [
+        0.0467404142314784,
+        0.00703055834856015
+      ]
+    },
+    "r8_embedding": {
+      "projection": [
+        0.10378522867709399,
+        0.010831743632618006
+      ],
+      "cka": [
+        0.06563954202020818,
+        0.0068505961820198025
+      ]
+    },
+    "r16_embedding": {
+      "projection": [
+        0.10404692183434963,
+        0.007545496946687895
+      ],
+      "cka": [
+        0.09306239602848515,
+        0.006748897638724496
+      ]
+    }
+  },
+  "P1a": {
+    "projection": {
+      "null_mean": 0.10378522867709399,
+      "per_layer_mean": {
+        "emb": 0.7183,
+        "0": 0.1028,
+        "1": 0.0998,
+        "2": 0.114,
+        "3": 0.0954,
+        "4": 0.1149,
+        "5": 0.1216
+      },
+      "per_layer_ratio": {
+        "emb": 6.92,
+        "0": 0.99,
+        "1": 0.96,
+        "2": 1.1,
+        "3": 0.92,
+        "4": 1.11,
+        "5": 1.17
+      },
+      "best_layer_ratio": 6.92100716249008
+    },
+    "cka": {
+      "null_mean": 0.06563954202020818,
+      "per_layer_mean": {
+        "emb": 0.4543,
+        "0": 0.065,
+        "1": 0.0632,
+        "2": 0.0721,
+        "3": 0.0604,
+        "4": 0.0726,
+        "5": 0.0769
+      },
+      "per_layer_ratio": {
+        "emb": 6.92,
+        "0": 0.99,
+        "1": 0.96,
+        "2": 1.1,
+        "3": 0.92,
+        "4": 1.11,
+        "5": 1.17
+      },
+      "best_layer_ratio": 6.921007162490082
+    },
+    "pass": true
+  },
+  "P1b": {
+    "best_layer": "emb",
+    "best_layer_mean_decode_value_positions": 1.0,
+    "pass": true
+  },
+  "P3_preview": {
+    "18": {
+      "mean_acc": 0.5033171224177191,
+      "min_acc": 0.42286919831223624,
+      "n_probes": 20
+    },
+    "36": {
+      "mean_acc": 0.5151560045614779,
+      "min_acc": 0.4020731042007638,
+      "n_probes": 20
+    }
+  },
+  "P1_pass": true
+}

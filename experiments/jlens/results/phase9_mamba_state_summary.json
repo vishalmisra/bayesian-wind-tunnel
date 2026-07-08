@@ -1,0 +1,40 @@
+{
+  "q20": {
+    "none": {
+      "kl_donor_bits": 4.3372602462768555,
+      "kl_orig_bits": 0.01473979838192463,
+      "redirect_margin_bits": -4.3225202560424805
+    },
+    "state_swap": {
+      "kl_donor_bits": 1.4867572784423828,
+      "kl_orig_bits": 1.4587205648422241,
+      "redirect_margin_bits": -0.028036586940288544
+    },
+    "state_zero": {
+      "kl_donor_bits": 24.618562698364258,
+      "kl_orig_bits": 24.323022842407227,
+      "redirect_margin_bits": -0.29553890228271484
+    }
+  },
+  "q36": {
+    "none": {
+      "kl_donor_bits": 11.06832504272461,
+      "kl_orig_bits": 0.021045224741101265,
+      "redirect_margin_bits": -11.047279357910156
+    },
+    "state_swap": {
+      "kl_donor_bits": 1.6170074939727783,
+      "kl_orig_bits": 2.834235906600952,
+      "redirect_margin_bits": 1.2172282934188843
+    },
+    "state_zero": {
+      "kl_donor_bits": 26.74308967590332,
+      "kl_orig_bits": 26.830041885375977,
+      "redirect_margin_bits": 0.08694960176944733
+    }
+  },
+  "verdict": {
+    "mean_state_swap_margin_bits": 0.5945958532392979,
+    "redirected": false
+  }
+}

@@ -1,0 +1,15 @@
+# Phase 0: infra + G0 stability gate (spec section 5).
+#   python experiments/jlens/run_phase0.py \
+#     --checkpoint logs/bijection_v20_repl/ckpt_final.pt \
+#     --out experiments/jlens/artifacts/phase0
+
+checkpoint: logs/bijection_v20_repl/ckpt_final.pt
+n_seq: 256          # per disjoint half
+seq_chunk: 64       # effective batch = seq_chunk * V = 1280
+V: 20
+L: 19
+min_horizon: 1
+seed: 42
+ranks: [4, 8, 16]
+gate: 0.8           # G0: mean disjoint-batch projection overlap, stacked r=8
+anthropic_jlens_commit: 581d398613e5602a5af361e1c34d3a92ea82ba8e
