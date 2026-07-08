@@ -1,0 +1,18 @@
+{
+  "out": "logs/pilots/bij-Arouting_s42",
+  "task": "bijection",
+  "donor": "logs/bijection_v20_dense/ckpt_step2500.pt",
+  "transplant": "frozen",
+  "transplant_set": "routing-only",
+  "freeze_at": null,
+  "sparse_after": null,
+  "sparse_density": 0.05,
+  "V": 20,
+  "L": 19,
+  "batch_size": 256,
+  "lr": 0.0003,
+  "warmup": 2000,
+  "max_steps": 20000,
+  "eval_every": 500,
+  "seed": 42
+}

@@ -123,6 +123,8 @@ frame-ratio vs step as the phase-change detector.
 | binding baseline | 0.0001 | 3,000 | 4,333 |
 | bind + substrate, trainable | 0.0001 | 3,333 | 4,166 |
 | bind + substrate, frozen | 0.0109 | 12,333 | 15,500 |
+| bind + routing-only, frozen | 0.0027 | 9,000 | 10,833 |
+| bij + routing-only, frozen | 0.0025 | 2,000 | 5,167 |
 
 Verdicts:
 1. **A (same-task): real but bounded.** 1.9x faster to early calibration;
@@ -140,8 +142,36 @@ Verdicts:
    neutral; frozen foreign substrate actively hurts (4x slower, 100x
    worse final). Caveat: tying makes the frozen substrate include the
    READOUT coordinates, and binding's value geometry differs. The
-   untied-transplant variant isolates whether tying is the culprit
-   (in flight).
+   routing-only variant isolates whether tying is the culprit
+   (resolved below).
+
+## Routing-only decomposition (2026-07-08, 3 seeds per arm)
+
+The `--transplant-set routing-only` arms transplant + freeze pos_emb
+and wq/wk but NOT tok_emb (and hence not the tied readout). Two clean
+answers:
+
+1. **The tied readout was the dominant term in the cross-task
+   failure.** Excluding it, the frozen foreign routing geometry
+   converges where the full frozen transplant never did: final MAE
+   0.0027 vs 0.0109, and it reaches 0.01 bits by step ~13,200 (full
+   frozen: never). The failure mode was mostly "frozen readout can't
+   express binding's value geometry," not "foreign routing is
+   unusable."
+2. **But frozen foreign routing is not free either.** Routing-only is
+   still ~3x slower than from-scratch to 0.05 bits on binding (9,000
+   vs 3,000 steps). Recoverable, not neutral: writers can compute
+   around a mismatched frozen geometry, at a real step cost.
+3. **Bonus (same-task):** routing-only loses the 1.9x early speedup
+   (steps to 0.05: 2,000 vs full-frozen 1,166 vs base 2,166). The
+   same-task transplant win was carried mostly by the pre-formed
+   embeddings/readout, not the QK geometry alone.
+
+Net: the transplantable asset at this scale is the full substrate
+including its readout coordinates, same-task; across tasks, transplant
+trainable or not at all. This sharpens rather than kills the pitch -
+the detector (when has the substrate formed) and the sparse-supervision
+schedule are where the value is; transplant is a same-task accelerant.
 
 ## Success criteria for promoting this to a real project
 
