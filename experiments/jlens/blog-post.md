@@ -1,4 +1,4 @@
-# Anthropic found a workspace inside Claude. We know what it is.
+# Anthropic found a workspace inside Claude. We found what workspaces are for.
 
 *Companion post for our working note ["The Workspace Survives Where the
 Circuit Dies: Routing Is Not
@@ -266,9 +266,10 @@ coordinates: the transformer externalizes it into a shared frame, the
 LSTM internalizes it into a private code, Mamba moves it into scan
 state. The writer computation is what training actually has to buy,
 position by position - and it, not the substrate, is where
-generalization lives. Anthropic's J-lens is the first instrument that
-measures the substrate on its own; run where the ground truth is
-known, it shows the two are separable with a scalpel.
+generalization lives. Anthropic's J-lens gives us a way to measure the
+substrate separately from the computation that uses it; run where the
+ground truth is known, it shows the two are separable with a scalpel.
+The separation is general. The coordinates are architectural.
 
 And the corollary that matters beyond interpretability: having a
 workspace and being able to use it are different properties, requiring
