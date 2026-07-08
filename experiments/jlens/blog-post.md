@@ -15,11 +15,13 @@ the J-lens - Jacobians from internal activations to future output
 logits - they found a small, densely connected subspace inside
 production language models that holds reusable content the model
 actually uses. They call it a global workspace. The finding set off a
-wave of commentary, some of it about consciousness (we find below a
-perfectly intact workspace in a model that has provably stopped
-computing; make of that what you will), most of it missing the more
-interesting question, which Anthropic themselves stated plainly: what
-decides what enters the workspace, and how does it form?
+wave of commentary, some of it about consciousness (these are grains
+of sand performing matrix multiplication, trained to predict the next
+token; consciousness came out of a billion years of
+don't-die-and-reproduce; these are not the same optimization), most of
+it missing
+the more interesting question, which Anthropic themselves stated
+plainly: what decides what enters the workspace, and how does it form?
 
 Before anything else, what the J-lens actually is. Two pieces of
 vocabulary.
