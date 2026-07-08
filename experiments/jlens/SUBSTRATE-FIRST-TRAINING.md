@@ -111,6 +111,38 @@ frame-ratio vs step as the phase-change detector.
   late adapters move precision) are the fine-tuning-side siblings of
   these pretraining-side pilots; a joint writeup could cover both.
 
+## Pilot results (2026-07-08, 3 seeds per arm, 20k steps)
+
+| arm | final MAE | steps to 0.05 | steps to 0.02 |
+|---|---|---|---|
+| bijection baseline | 0.0022 | 2,166 | 4,500 |
+| A transplant frozen | 0.0027 | **1,166 (1.9x)** | 4,166 |
+| A transplant trainable | 0.0021 | 1,333 | 4,333 |
+| B freeze at 2,500 | 0.0029 | 2,333 | 4,500 |
+| C 5% labels after 2,500 | 0.0074 | 2,166 | 11,666 |
+| binding baseline | 0.0001 | 3,000 | 4,333 |
+| bind + substrate, trainable | 0.0001 | 3,333 | 4,166 |
+| bind + substrate, frozen | 0.0109 | 12,333 | 15,500 |
+
+Verdicts:
+1. **A (same-task): real but bounded.** 1.9x faster to early calibration;
+   converges with baseline later. Formation is ~5% of training at this
+   scale, so skipping it has bounded headroom HERE; whether formation is
+   a larger fraction at scale is the open (fundable) question.
+2. **B: freezing is free.** 17% of parameters frozen at 5% of training,
+   final calibration essentially unchanged (0.0029 vs 0.0022). Also
+   resolves the consolidation question: late frame drift is writer-side
+   adaptation to a fixed frame.
+3. **C: ~8x label efficiency.** 5% density after formation costs 2.6x
+   more steps with 20x fewer labels. The monetizable claim where
+   supervision is the scarce resource (RLHF, annotation).
+4. **Cross-task: negative as frozen basis.** Trainable transplant is
+   neutral; frozen foreign substrate actively hurts (4x slower, 100x
+   worse final). Caveat: tying makes the frozen substrate include the
+   READOUT coordinates, and binding's value geometry differs. The
+   untied-transplant variant isolates whether tying is the culprit
+   (in flight).
+
 ## Success criteria for promoting this to a real project
 
 Pilot A or B shows >=2x reduction in steps-to-calibration (or matched
