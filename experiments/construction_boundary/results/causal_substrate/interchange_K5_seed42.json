@@ -1,0 +1,65 @@
+{
+  "per_position": [
+    {
+      "predict_position": 2,
+      "patch_residual_position": 1,
+      "n_informative_pairs": 1895,
+      "n_pairs_for_shift": 1648,
+      "P_B(target_B) baseline": 0.08923161029815674,
+      "P_inj(target_B) patched": 0.08612345904111862,
+      "P_B(target_A_swap) baseline": 0.05691592022776604,
+      "P_inj(target_A_swap) patched": 0.05720208212733269,
+      "P_A(target_A_swap) reference": 0.06207192316651344,
+      "shift_fraction_logprob_mean": 0.08608366549015045,
+      "shift_fraction_logprob_median": 0.07422357052564621,
+      "shift_fraction_logprob_p25": -0.3220624327659607,
+      "shift_fraction_logprob_p75": 0.5413572192192078
+    },
+    {
+      "predict_position": 3,
+      "patch_residual_position": 2,
+      "n_informative_pairs": 1877,
+      "n_pairs_for_shift": 1858,
+      "P_B(target_B) baseline": 0.5669728517532349,
+      "P_inj(target_B) patched": 0.5605735182762146,
+      "P_B(target_A_swap) baseline": 0.02705434150993824,
+      "P_inj(target_A_swap) patched": 0.0275371503084898,
+      "P_A(target_A_swap) reference": 0.0915353074669838,
+      "shift_fraction_logprob_mean": 0.10231468826532364,
+      "shift_fraction_logprob_median": 0.019573887810111046,
+      "shift_fraction_logprob_p25": -0.3295222818851471,
+      "shift_fraction_logprob_p75": 0.375032901763916
+    },
+    {
+      "predict_position": 4,
+      "patch_residual_position": 3,
+      "n_informative_pairs": 1872,
+      "n_pairs_for_shift": 1867,
+      "P_B(target_B) baseline": 0.960649311542511,
+      "P_inj(target_B) patched": 0.9563316106796265,
+      "P_B(target_A_swap) baseline": 0.0024586396757513285,
+      "P_inj(target_A_swap) patched": 0.0027556070126593113,
+      "P_A(target_A_swap) reference": 0.11417565494775772,
+      "shift_fraction_logprob_mean": -0.11817174404859543,
+      "shift_fraction_logprob_median": 0.027716604992747307,
+      "shift_fraction_logprob_p25": -0.47202765941619873,
+      "shift_fraction_logprob_p75": 0.6306271553039551
+    },
+    {
+      "predict_position": 5,
+      "patch_residual_position": 4,
+      "n_informative_pairs": 1868,
+      "n_pairs_for_shift": 1862,
+      "P_B(target_B) baseline": 0.9969644546508789,
+      "P_inj(target_B) patched": 0.9966549277305603,
+      "P_B(target_A_swap) baseline": 0.00018895819084718823,
+      "P_inj(target_A_swap) patched": 0.0002088061155518517,
+      "P_A(target_A_swap) reference": 0.10157743096351624,
+      "shift_fraction_logprob_mean": 0.22926856577396393,
+      "shift_fraction_logprob_median": 0.013693173415958881,
+      "shift_fraction_logprob_p25": -0.40868866443634033,
+      "shift_fraction_logprob_p75": 0.4855848252773285
+    }
+  ],
+  "n_pairs_total": 1997
+}

@@ -1,0 +1,243 @@
+{
+  "config": {
+    "p": 31,
+    "pi": 0.5,
+    "seq_len": 16,
+    "seed": 42,
+    "holdout_bucket": 1,
+    "train_buckets": [
+      0,
+      2,
+      3,
+      4
+    ],
+    "n_buckets": 5,
+    "bucket_counts": [
+      5892,
+      5759,
+      5688,
+      5711,
+      5780
+    ],
+    "n_steps": 150000,
+    "batch_size": 16,
+    "lr": 0.0003,
+    "arch": {
+      "d_model": 192,
+      "n_layers": 6,
+      "n_heads": 6,
+      "d_ff": 768,
+      "dropout": 0.1
+    },
+    "device": "cuda:0",
+    "eval_n_final": 20000,
+    "eval_n_during": 1000,
+    "early_stop_mae": 0.02
+  },
+  "best_step": 140000,
+  "best_train_mae_during": 0.11982263766310401,
+  "final_train_bucket": {
+    "n_predictions": 300000,
+    "kl_nats_mean": 0.05114320581646407,
+    "kl_nats_std": 0.27135527123175635,
+    "kl_bits_mean": 0.0737840494065763,
+    "entropy_mae_bits_mean": 0.12645797610503734,
+    "entropy_mae_bits_std": 0.4961733727027516,
+    "tv_mean": 0.04034170561662239
+  },
+  "final_heldout_bucket": {
+    "n_predictions": 300000,
+    "kl_nats_mean": 0.13600127362768524,
+    "kl_nats_std": 0.48000923671705586,
+    "kl_bits_mean": 0.19620836301724448,
+    "entropy_mae_bits_mean": 0.2636509944973211,
+    "entropy_mae_bits_std": 0.8355645811380052,
+    "tv_mean": 0.07219825615448489
+  },
+  "separation_kl_bits": 0.12242431361066818,
+  "separation_mae_bits": 0.13719301839228376,
+  "eval_history": [
+    {
+      "step": 10000,
+      "train_bucket": {
+        "n_predictions": 15000,
+        "kl_nats_mean": 0.9414877905655572,
+        "kl_nats_std": 1.4522022674537713,
+        "kl_bits_mean": 1.3582797665064363,
+        "entropy_mae_bits_mean": 1.4071503039797548,
+        "entropy_mae_bits_std": 2.0919332840299063,
+        "tv_mean": 0.30349016487241626
+      }
+    },
+    {
+      "step": 20000,
+      "train_bucket": {
+        "n_predictions": 15000,
+        "kl_nats_mean": 0.9897319183804143,
+        "kl_nats_std": 1.458853757916814,
+        "kl_bits_mean": 1.427881330456944,
+        "entropy_mae_bits_mean": 1.478482509147046,
+        "entropy_mae_bits_std": 2.104751992672788,
+        "tv_mean": 0.3278347455359892
+      }
+    },
+    {
+      "step": 30000,
+      "train_bucket": {
+        "n_predictions": 15000,
+        "kl_nats_mean": 0.813699799953192,
+        "kl_nats_std": 1.2483213775817747,
+        "kl_bits_mean": 1.1739206661648116,
+        "entropy_mae_bits_mean": 1.2891867630168077,
+        "entropy_mae_bits_std": 1.8844389610082932,
+        "tv_mean": 0.30668638267978726
+      }
+    },
+    {
+      "step": 40000,
+      "train_bucket": {
+        "n_predictions": 15000,
+        "kl_nats_mean": 0.4984734352825599,
+        "kl_nats_std": 0.9396565579906418,
+        "kl_bits_mean": 0.7191451530970349,
+        "entropy_mae_bits_mean": 0.9160951348035782,
+        "entropy_mae_bits_std": 1.5257368605964137,
+        "tv_mean": 0.2244223545959769
+      }
+    },
+    {
+      "step": 50000,
+      "train_bucket": {
+        "n_predictions": 15000,
+        "kl_nats_mean": 0.2990527420825447,
+        "kl_nats_std": 0.7128005163404396,
+        "kl_bits_mean": 0.43144190796673343,
+        "entropy_mae_bits_mean": 0.5937265283745106,
+        "entropy_mae_bits_std": 1.2374814591280954,
+        "tv_mean": 0.1522401793646209
+      }
+    },
+    {
+      "step": 60000,
+      "train_bucket": {
+        "n_predictions": 15000,
+        "kl_nats_mean": 0.20943626119493486,
+        "kl_nats_std": 0.591892986246668,
+        "kl_bits_mean": 0.3021526554082582,
+        "entropy_mae_bits_mean": 0.4102216498187042,
+        "entropy_mae_bits_std": 1.0114323232027471,
+        "tv_mean": 0.11484840576498997
+      }
+    },
+    {
+      "step": 70000,
+      "train_bucket": {
+        "n_predictions": 15000,
+        "kl_nats_mean": 0.14644901765986418,
+        "kl_nats_std": 0.4823554664276651,
+        "kl_bits_mean": 0.21128127152094628,
+        "entropy_mae_bits_mean": 0.3045869542898768,
+        "entropy_mae_bits_std": 0.8648526588335035,
+        "tv_mean": 0.08489126921079485
+      }
+    },
+    {
+      "step": 80000,
+      "train_bucket": {
+        "n_predictions": 15000,
+        "kl_nats_mean": 0.12565133473781448,
+        "kl_nats_std": 0.46319776934307605,
+        "kl_bits_mean": 0.1812765575073241,
+        "entropy_mae_bits_mean": 0.2521428162446353,
+        "entropy_mae_bits_std": 0.7771958502663927,
+        "tv_mean": 0.07365710568450495
+      }
+    },
+    {
+      "step": 90000,
+      "train_bucket": {
+        "n_predictions": 15000,
+        "kl_nats_mean": 0.09978558536765927,
+        "kl_nats_std": 0.3965911434897666,
+        "kl_bits_mean": 0.14396016916212434,
+        "entropy_mae_bits_mean": 0.21083626804308533,
+        "entropy_mae_bits_std": 0.6942986538593203,
+        "tv_mean": 0.06385167265641638
+      }
+    },
+    {
+      "step": 100000,
+      "train_bucket": {
+        "n_predictions": 15000,
+        "kl_nats_mean": 0.07404607859256682,
+        "kl_nats_std": 0.3227928809259124,
+        "kl_bits_mean": 0.10682591038277059,
+        "entropy_mae_bits_mean": 0.16393646674174592,
+        "entropy_mae_bits_std": 0.5784972647740371,
+        "tv_mean": 0.05288342010453168
+      }
+    },
+    {
+      "step": 110000,
+      "train_bucket": {
+        "n_predictions": 15000,
+        "kl_nats_mean": 0.06350819118466751,
+        "kl_nats_std": 0.297426597279519,
+        "kl_bits_mean": 0.091622952477948,
+        "entropy_mae_bits_mean": 0.14917026752782792,
+        "entropy_mae_bits_std": 0.5395018924867678,
+        "tv_mean": 0.047948915219687735
+      }
+    },
+    {
+      "step": 120000,
+      "train_bucket": {
+        "n_predictions": 15000,
+        "kl_nats_mean": 0.05782376770155909,
+        "kl_nats_std": 0.28866727660186714,
+        "kl_bits_mean": 0.08342206290855471,
+        "entropy_mae_bits_mean": 0.1376213166380457,
+        "entropy_mae_bits_std": 0.5138842228928227,
+        "tv_mean": 0.04491302052809444
+      }
+    },
+    {
+      "step": 130000,
+      "train_bucket": {
+        "n_predictions": 15000,
+        "kl_nats_mean": 0.049519001149799485,
+        "kl_nats_std": 0.25931476195359393,
+        "kl_bits_mean": 0.0714408173885906,
+        "entropy_mae_bits_mean": 0.12458954515237955,
+        "entropy_mae_bits_std": 0.4853392402848538,
+        "tv_mean": 0.040073613715578826
+      }
+    },
+    {
+      "step": 140000,
+      "train_bucket": {
+        "n_predictions": 15000,
+        "kl_nats_mean": 0.04675100531159202,
+        "kl_nats_std": 0.24442734525025264,
+        "kl_bits_mean": 0.0674474435196074,
+        "entropy_mae_bits_mean": 0.11982263766310401,
+        "entropy_mae_bits_std": 0.4698797898463134,
+        "tv_mean": 0.03844829333324951
+      }
+    },
+    {
+      "step": 150000,
+      "train_bucket": {
+        "n_predictions": 15000,
+        "kl_nats_mean": 0.054358193493585456,
+        "kl_nats_std": 0.28925270739994313,
+        "kl_bits_mean": 0.07842229618487846,
+        "entropy_mae_bits_mean": 0.13115332157750473,
+        "entropy_mae_bits_std": 0.5177549497933652,
+        "tv_mean": 0.040567927875359185
+      }
+    }
+  ],
+  "final_loss": 2.0835727959871293,
+  "wall_clock_sec": 12169.586616754532
+}

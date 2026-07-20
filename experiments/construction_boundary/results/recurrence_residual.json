@@ -1,0 +1,8 @@
+{
+  "n": 87284,
+  "mean": 2.823090546832996e-05,
+  "median": 1.5312208849064845e-05,
+  "p90": 3.85409148347001e-05,
+  "max": 0.0007155759282313817,
+  "note": "L1 off-mixture residual, integer pi-experiment, t>=4, 4 seeds"
+}

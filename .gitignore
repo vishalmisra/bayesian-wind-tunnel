@@ -58,3 +58,9 @@ Thumbs.db
 
 # HuggingFace cache
 .cache/
+
+# Released small result data for the Nature construction-boundary experiments
+# (checkpoints stay excluded via *.pt/*.pth above; those are archived on Zenodo)
+!experiments/construction_boundary/results/
+!experiments/construction_boundary/results/**/
+!experiments/construction_boundary/results/**/*.json
