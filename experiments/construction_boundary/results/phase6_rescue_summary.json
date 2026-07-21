@@ -1,0 +1,826 @@
+{
+  "k5": [
+    {
+      "checkpoint": "<companion-repo>/results/extrapolation/horizon_integer_seed42/best_model.pt",
+      "baseline_acc": 0.16471354166666666,
+      "detail": {
+        "p2->q8": {
+          "none": {
+            "acc": 0.20703125,
+            "entropy_bits": 3.4806926250457764
+          },
+          "frame@emb": {
+            "acc": 0.2578125,
+            "entropy_bits": 3.4988908767700195
+          },
+          "random@emb": {
+            "acc": 0.21484375,
+            "entropy_bits": 3.485633373260498
+          },
+          "full@emb": {
+            "acc": 0.3515625,
+            "entropy_bits": 3.1728219985961914
+          },
+          "frame@0": {
+            "acc": 0.27734375,
+            "entropy_bits": 3.4806339740753174
+          },
+          "random@0": {
+            "acc": 0.20703125,
+            "entropy_bits": 3.490912437438965
+          },
+          "full@0": {
+            "acc": 0.353515625,
+            "entropy_bits": 3.24763560295105
+          },
+          "frame@1": {
+            "acc": 0.220703125,
+            "entropy_bits": 3.4780797958374023
+          },
+          "random@1": {
+            "acc": 0.203125,
+            "entropy_bits": 3.496270179748535
+          },
+          "full@1": {
+            "acc": 0.94140625,
+            "entropy_bits": 2.8463926315307617
+          },
+          "frame@2": {
+            "acc": 0.2265625,
+            "entropy_bits": 3.4928197860717773
+          },
+          "random@2": {
+            "acc": 0.21875,
+            "entropy_bits": 3.479107618331909
+          },
+          "full@2": {
+            "acc": 0.998046875,
+            "entropy_bits": 2.700218677520752
+          },
+          "frame@3": {
+            "acc": 0.23828125,
+            "entropy_bits": 3.523176908493042
+          },
+          "random@3": {
+            "acc": 0.26171875,
+            "entropy_bits": 3.4865870475769043
+          },
+          "full@3": {
+            "acc": 1.0,
+            "entropy_bits": 2.5868372917175293
+          }
+        },
+        "p3->q9": {
+          "none": {
+            "acc": 0.15234375,
+            "entropy_bits": 3.7552764415740967
+          },
+          "frame@emb": {
+            "acc": 0.162109375,
+            "entropy_bits": 3.7658913135528564
+          },
+          "random@emb": {
+            "acc": 0.15625,
+            "entropy_bits": 3.7411611080169678
+          },
+          "full@emb": {
+            "acc": 0.126953125,
+            "entropy_bits": 3.724658966064453
+          },
+          "frame@0": {
+            "acc": 0.181640625,
+            "entropy_bits": 3.7277369499206543
+          },
+          "random@0": {
+            "acc": 0.1484375,
+            "entropy_bits": 3.7419447898864746
+          },
+          "full@0": {
+            "acc": 0.212890625,
+            "entropy_bits": 3.6631579399108887
+          },
+          "frame@1": {
+            "acc": 0.193359375,
+            "entropy_bits": 3.720663547515869
+          },
+          "random@1": {
+            "acc": 0.162109375,
+            "entropy_bits": 3.7397398948669434
+          },
+          "full@1": {
+            "acc": 0.67578125,
+            "entropy_bits": 3.4898855686187744
+          },
+          "frame@2": {
+            "acc": 0.185546875,
+            "entropy_bits": 3.7240660190582275
+          },
+          "random@2": {
+            "acc": 0.17578125,
+            "entropy_bits": 3.744047164916992
+          },
+          "full@2": {
+            "acc": 0.970703125,
+            "entropy_bits": 3.3817129135131836
+          },
+          "frame@3": {
+            "acc": 0.171875,
+            "entropy_bits": 3.7520484924316406
+          },
+          "random@3": {
+            "acc": 0.201171875,
+            "entropy_bits": 3.7421343326568604
+          },
+          "full@3": {
+            "acc": 1.0,
+            "entropy_bits": 3.239305257797241
+          }
+        },
+        "p4->q10": {
+          "none": {
+            "acc": 0.134765625,
+            "entropy_bits": 3.779754161834717
+          },
+          "frame@emb": {
+            "acc": 0.12890625,
+            "entropy_bits": 3.774336814880371
+          },
+          "random@emb": {
+            "acc": 0.123046875,
+            "entropy_bits": 3.7847483158111572
+          },
+          "full@emb": {
+            "acc": 0.10546875,
+            "entropy_bits": 3.784101963043213
+          },
+          "frame@0": {
+            "acc": 0.134765625,
+            "entropy_bits": 3.774768590927124
+          },
+          "random@0": {
+            "acc": 0.14453125,
+            "entropy_bits": 3.7858898639678955
+          },
+          "full@0": {
+            "acc": 0.212890625,
+            "entropy_bits": 3.7977254390716553
+          },
+          "frame@1": {
+            "acc": 0.15625,
+            "entropy_bits": 3.7776994705200195
+          },
+          "random@1": {
+            "acc": 0.1484375,
+            "entropy_bits": 3.7860000133514404
+          },
+          "full@1": {
+            "acc": 0.720703125,
+            "entropy_bits": 3.7258849143981934
+          },
+          "frame@2": {
+            "acc": 0.150390625,
+            "entropy_bits": 3.786020278930664
+          },
+          "random@2": {
+            "acc": 0.171875,
+            "entropy_bits": 3.7830021381378174
+          },
+          "full@2": {
+            "acc": 0.98046875,
+            "entropy_bits": 3.6911776065826416
+          },
+          "frame@3": {
+            "acc": 0.158203125,
+            "entropy_bits": 3.793896436691284
+          },
+          "random@3": {
+            "acc": 0.181640625,
+            "entropy_bits": 3.7842185497283936
+          },
+          "full@3": {
+            "acc": 1.0,
+            "entropy_bits": 3.629901170730591
+          }
+        }
+      }
+    },
+    {
+      "checkpoint": "<companion-repo>/results/extrapolation/horizon_integer_seed1337/best_model.pt",
+      "baseline_acc": 0.20768229166666666,
+      "detail": {
+        "p2->q8": {
+          "none": {
+            "acc": 0.28125,
+            "entropy_bits": 3.4249205589294434
+          },
+          "frame@emb": {
+            "acc": 0.291015625,
+            "entropy_bits": 3.4398319721221924
+          },
+          "random@emb": {
+            "acc": 0.302734375,
+            "entropy_bits": 3.411309242248535
+          },
+          "full@emb": {
+            "acc": 0.3671875,
+            "entropy_bits": 3.0637950897216797
+          },
+          "frame@0": {
+            "acc": 0.328125,
+            "entropy_bits": 3.4149861335754395
+          },
+          "random@0": {
+            "acc": 0.29296875,
+            "entropy_bits": 3.425337076187134
+          },
+          "full@0": {
+            "acc": 0.419921875,
+            "entropy_bits": 3.103886604309082
+          },
+          "frame@1": {
+            "acc": 0.3125,
+            "entropy_bits": 3.4132680892944336
+          },
+          "random@1": {
+            "acc": 0.31640625,
+            "entropy_bits": 3.42284893989563
+          },
+          "full@1": {
+            "acc": 0.91796875,
+            "entropy_bits": 2.7183682918548584
+          },
+          "frame@2": {
+            "acc": 0.3125,
+            "entropy_bits": 3.4084928035736084
+          },
+          "random@2": {
+            "acc": 0.30859375,
+            "entropy_bits": 3.417442560195923
+          },
+          "full@2": {
+            "acc": 0.98828125,
+            "entropy_bits": 2.4707324504852295
+          },
+          "frame@3": {
+            "acc": 0.333984375,
+            "entropy_bits": 3.4288575649261475
+          },
+          "random@3": {
+            "acc": 0.33984375,
+            "entropy_bits": 3.4085261821746826
+          },
+          "full@3": {
+            "acc": 1.0,
+            "entropy_bits": 2.2682955265045166
+          }
+        },
+        "p3->q9": {
+          "none": {
+            "acc": 0.17578125,
+            "entropy_bits": 3.5420398712158203
+          },
+          "frame@emb": {
+            "acc": 0.189453125,
+            "entropy_bits": 3.5262908935546875
+          },
+          "random@emb": {
+            "acc": 0.1796875,
+            "entropy_bits": 3.5588223934173584
+          },
+          "full@emb": {
+            "acc": 0.177734375,
+            "entropy_bits": 3.5397109985351562
+          },
+          "frame@0": {
+            "acc": 0.185546875,
+            "entropy_bits": 3.530982255935669
+          },
+          "random@0": {
+            "acc": 0.1875,
+            "entropy_bits": 3.5412330627441406
+          },
+          "full@0": {
+            "acc": 0.265625,
+            "entropy_bits": 3.495380401611328
+          },
+          "frame@1": {
+            "acc": 0.181640625,
+            "entropy_bits": 3.530506134033203
+          },
+          "random@1": {
+            "acc": 0.19921875,
+            "entropy_bits": 3.545468807220459
+          },
+          "full@1": {
+            "acc": 0.8046875,
+            "entropy_bits": 3.3077752590179443
+          },
+          "frame@2": {
+            "acc": 0.1875,
+            "entropy_bits": 3.5298426151275635
+          },
+          "random@2": {
+            "acc": 0.201171875,
+            "entropy_bits": 3.55244517326355
+          },
+          "full@2": {
+            "acc": 0.96875,
+            "entropy_bits": 3.1484854221343994
+          },
+          "frame@3": {
+            "acc": 0.19921875,
+            "entropy_bits": 3.5397391319274902
+          },
+          "random@3": {
+            "acc": 0.2265625,
+            "entropy_bits": 3.5558359622955322
+          },
+          "full@3": {
+            "acc": 0.998046875,
+            "entropy_bits": 2.807432174682617
+          }
+        },
+        "p4->q10": {
+          "none": {
+            "acc": 0.166015625,
+            "entropy_bits": 3.648355484008789
+          },
+          "frame@emb": {
+            "acc": 0.162109375,
+            "entropy_bits": 3.655534029006958
+          },
+          "random@emb": {
+            "acc": 0.177734375,
+            "entropy_bits": 3.6497669219970703
+          },
+          "full@emb": {
+            "acc": 0.1484375,
+            "entropy_bits": 3.6875619888305664
+          },
+          "frame@0": {
+            "acc": 0.166015625,
+            "entropy_bits": 3.6565165519714355
+          },
+          "random@0": {
+            "acc": 0.181640625,
+            "entropy_bits": 3.655817747116089
+          },
+          "full@0": {
+            "acc": 0.21875,
+            "entropy_bits": 3.6820132732391357
+          },
+          "frame@1": {
+            "acc": 0.1796875,
+            "entropy_bits": 3.668043613433838
+          },
+          "random@1": {
+            "acc": 0.169921875,
+            "entropy_bits": 3.6647417545318604
+          },
+          "full@1": {
+            "acc": 0.662109375,
+            "entropy_bits": 3.6879570484161377
+          },
+          "frame@2": {
+            "acc": 0.193359375,
+            "entropy_bits": 3.671538829803467
+          },
+          "random@2": {
+            "acc": 0.189453125,
+            "entropy_bits": 3.661517381668091
+          },
+          "full@2": {
+            "acc": 0.916015625,
+            "entropy_bits": 3.6186869144439697
+          },
+          "frame@3": {
+            "acc": 0.19921875,
+            "entropy_bits": 3.6905694007873535
+          },
+          "random@3": {
+            "acc": 0.193359375,
+            "entropy_bits": 3.684114694595337
+          },
+          "full@3": {
+            "acc": 0.99609375,
+            "entropy_bits": 3.500519275665283
+          }
+        }
+      }
+    },
+    {
+      "checkpoint": "<companion-repo>/results/extrapolation/horizon_integer_seed2024/best_model.pt",
+      "baseline_acc": 0.18359375,
+      "detail": {
+        "p2->q8": {
+          "none": {
+            "acc": 0.24609375,
+            "entropy_bits": 3.3971519470214844
+          },
+          "frame@emb": {
+            "acc": 0.25,
+            "entropy_bits": 3.424572467803955
+          },
+          "random@emb": {
+            "acc": 0.265625,
+            "entropy_bits": 3.381499767303467
+          },
+          "full@emb": {
+            "acc": 0.35546875,
+            "entropy_bits": 3.11007022857666
+          },
+          "frame@0": {
+            "acc": 0.26953125,
+            "entropy_bits": 3.3948709964752197
+          },
+          "random@0": {
+            "acc": 0.26953125,
+            "entropy_bits": 3.379213571548462
+          },
+          "full@0": {
+            "acc": 0.615234375,
+            "entropy_bits": 3.071458578109741
+          },
+          "frame@1": {
+            "acc": 0.23828125,
+            "entropy_bits": 3.37801456451416
+          },
+          "random@1": {
+            "acc": 0.2734375,
+            "entropy_bits": 3.3806545734405518
+          },
+          "full@1": {
+            "acc": 0.96484375,
+            "entropy_bits": 2.7332653999328613
+          },
+          "frame@2": {
+            "acc": 0.263671875,
+            "entropy_bits": 3.4052326679229736
+          },
+          "random@2": {
+            "acc": 0.29296875,
+            "entropy_bits": 3.3901960849761963
+          },
+          "full@2": {
+            "acc": 0.99609375,
+            "entropy_bits": 2.5722057819366455
+          },
+          "frame@3": {
+            "acc": 0.267578125,
+            "entropy_bits": 3.416590690612793
+          },
+          "random@3": {
+            "acc": 0.30859375,
+            "entropy_bits": 3.40000319480896
+          },
+          "full@3": {
+            "acc": 1.0,
+            "entropy_bits": 2.401320457458496
+          }
+        },
+        "p3->q9": {
+          "none": {
+            "acc": 0.14453125,
+            "entropy_bits": 3.8100829124450684
+          },
+          "frame@emb": {
+            "acc": 0.142578125,
+            "entropy_bits": 3.7845349311828613
+          },
+          "random@emb": {
+            "acc": 0.17578125,
+            "entropy_bits": 3.72440767288208
+          },
+          "full@emb": {
+            "acc": 0.177734375,
+            "entropy_bits": 3.5364742279052734
+          },
+          "frame@0": {
+            "acc": 0.162109375,
+            "entropy_bits": 3.7801578044891357
+          },
+          "random@0": {
+            "acc": 0.16796875,
+            "entropy_bits": 3.7210826873779297
+          },
+          "full@0": {
+            "acc": 0.30859375,
+            "entropy_bits": 3.4418163299560547
+          },
+          "frame@1": {
+            "acc": 0.162109375,
+            "entropy_bits": 3.794994354248047
+          },
+          "random@1": {
+            "acc": 0.166015625,
+            "entropy_bits": 3.766432285308838
+          },
+          "full@1": {
+            "acc": 0.806640625,
+            "entropy_bits": 3.322012424468994
+          },
+          "frame@2": {
+            "acc": 0.150390625,
+            "entropy_bits": 3.7893192768096924
+          },
+          "random@2": {
+            "acc": 0.1953125,
+            "entropy_bits": 3.7462010383605957
+          },
+          "full@2": {
+            "acc": 0.9765625,
+            "entropy_bits": 3.211355686187744
+          },
+          "frame@3": {
+            "acc": 0.162109375,
+            "entropy_bits": 3.7967135906219482
+          },
+          "random@3": {
+            "acc": 0.21484375,
+            "entropy_bits": 3.744232177734375
+          },
+          "full@3": {
+            "acc": 1.0,
+            "entropy_bits": 3.071401596069336
+          }
+        },
+        "p4->q10": {
+          "none": {
+            "acc": 0.16015625,
+            "entropy_bits": 3.7799556255340576
+          },
+          "frame@emb": {
+            "acc": 0.162109375,
+            "entropy_bits": 3.7621610164642334
+          },
+          "random@emb": {
+            "acc": 0.169921875,
+            "entropy_bits": 3.774937391281128
+          },
+          "full@emb": {
+            "acc": 0.1328125,
+            "entropy_bits": 3.7882068157196045
+          },
+          "frame@0": {
+            "acc": 0.1640625,
+            "entropy_bits": 3.7547965049743652
+          },
+          "random@0": {
+            "acc": 0.16796875,
+            "entropy_bits": 3.775836706161499
+          },
+          "full@0": {
+            "acc": 0.19140625,
+            "entropy_bits": 3.799386978149414
+          },
+          "frame@1": {
+            "acc": 0.169921875,
+            "entropy_bits": 3.7665822505950928
+          },
+          "random@1": {
+            "acc": 0.171875,
+            "entropy_bits": 3.776338815689087
+          },
+          "full@1": {
+            "acc": 0.71875,
+            "entropy_bits": 3.8028788566589355
+          },
+          "frame@2": {
+            "acc": 0.166015625,
+            "entropy_bits": 3.761908769607544
+          },
+          "random@2": {
+            "acc": 0.177734375,
+            "entropy_bits": 3.7799718379974365
+          },
+          "full@2": {
+            "acc": 0.970703125,
+            "entropy_bits": 3.7657740116119385
+          },
+          "frame@3": {
+            "acc": 0.15234375,
+            "entropy_bits": 3.780142307281494
+          },
+          "random@3": {
+            "acc": 0.189453125,
+            "entropy_bits": 3.781914710998535
+          },
+          "full@3": {
+            "acc": 0.998046875,
+            "entropy_bits": 3.727465867996216
+          }
+        }
+      }
+    }
+  ],
+  "control": {
+    "checkpoint": "<companion-repo>/results/recurrence/integer/seed_42/best_model.pt",
+    "baseline_acc": 1.0,
+    "detail": {
+      "p2->q8": {
+        "none": {
+          "acc": 1.0,
+          "entropy_bits": 0.002126034116372466
+        },
+        "frame@emb": {
+          "acc": 1.0,
+          "entropy_bits": 0.002472883788868785
+        },
+        "random@emb": {
+          "acc": 1.0,
+          "entropy_bits": 0.002098568482324481
+        },
+        "full@emb": {
+          "acc": 0.982421875,
+          "entropy_bits": 1.0488414764404297
+        },
+        "frame@0": {
+          "acc": 1.0,
+          "entropy_bits": 0.002551198238506913
+        },
+        "random@0": {
+          "acc": 1.0,
+          "entropy_bits": 0.0021761951502412558
+        },
+        "full@0": {
+          "acc": 1.0,
+          "entropy_bits": 0.4724612236022949
+        },
+        "frame@1": {
+          "acc": 1.0,
+          "entropy_bits": 0.0024730057921260595
+        },
+        "random@1": {
+          "acc": 1.0,
+          "entropy_bits": 0.0022294241935014725
+        },
+        "full@1": {
+          "acc": 1.0,
+          "entropy_bits": 0.4742869436740875
+        },
+        "frame@2": {
+          "acc": 1.0,
+          "entropy_bits": 0.0024343489203602076
+        },
+        "random@2": {
+          "acc": 1.0,
+          "entropy_bits": 0.002301876898854971
+        },
+        "full@2": {
+          "acc": 1.0,
+          "entropy_bits": 0.7040069103240967
+        },
+        "frame@3": {
+          "acc": 1.0,
+          "entropy_bits": 0.0025518459733575583
+        },
+        "random@3": {
+          "acc": 1.0,
+          "entropy_bits": 0.0024592282716184855
+        },
+        "full@3": {
+          "acc": 1.0,
+          "entropy_bits": 1.099096655845642
+        }
+      },
+      "p3->q9": {
+        "none": {
+          "acc": 1.0,
+          "entropy_bits": 0.0020509061869233847
+        },
+        "frame@emb": {
+          "acc": 1.0,
+          "entropy_bits": 0.0022758711129426956
+        },
+        "random@emb": {
+          "acc": 1.0,
+          "entropy_bits": 0.0021253065206110477
+        },
+        "full@emb": {
+          "acc": 0.958984375,
+          "entropy_bits": 0.41948437690734863
+        },
+        "frame@0": {
+          "acc": 1.0,
+          "entropy_bits": 0.0023464623373001814
+        },
+        "random@0": {
+          "acc": 1.0,
+          "entropy_bits": 0.0021574466954916716
+        },
+        "full@0": {
+          "acc": 0.994140625,
+          "entropy_bits": 0.12864923477172852
+        },
+        "frame@1": {
+          "acc": 1.0,
+          "entropy_bits": 0.0023643095046281815
+        },
+        "random@1": {
+          "acc": 1.0,
+          "entropy_bits": 0.002193321008235216
+        },
+        "full@1": {
+          "acc": 1.0,
+          "entropy_bits": 0.08717259019613266
+        },
+        "frame@2": {
+          "acc": 1.0,
+          "entropy_bits": 0.002307585906237364
+        },
+        "random@2": {
+          "acc": 1.0,
+          "entropy_bits": 0.0022275536321103573
+        },
+        "full@2": {
+          "acc": 1.0,
+          "entropy_bits": 0.10594307631254196
+        },
+        "frame@3": {
+          "acc": 1.0,
+          "entropy_bits": 0.002465181052684784
+        },
+        "random@3": {
+          "acc": 1.0,
+          "entropy_bits": 0.0023108161985874176
+        },
+        "full@3": {
+          "acc": 1.0,
+          "entropy_bits": 0.08254756778478622
+        }
+      },
+      "p4->q10": {
+        "none": {
+          "acc": 1.0,
+          "entropy_bits": 0.0019830595701932907
+        },
+        "frame@emb": {
+          "acc": 1.0,
+          "entropy_bits": 0.002069281181320548
+        },
+        "random@emb": {
+          "acc": 1.0,
+          "entropy_bits": 0.001998564228415489
+        },
+        "full@emb": {
+          "acc": 0.9453125,
+          "entropy_bits": 0.23088786005973816
+        },
+        "frame@0": {
+          "acc": 1.0,
+          "entropy_bits": 0.0021100908052176237
+        },
+        "random@0": {
+          "acc": 1.0,
+          "entropy_bits": 0.002019435167312622
+        },
+        "full@0": {
+          "acc": 1.0,
+          "entropy_bits": 0.006775129120796919
+        },
+        "frame@1": {
+          "acc": 1.0,
+          "entropy_bits": 0.002095458097755909
+        },
+        "random@1": {
+          "acc": 1.0,
+          "entropy_bits": 0.002046403242275119
+        },
+        "full@1": {
+          "acc": 1.0,
+          "entropy_bits": 0.005482121370732784
+        },
+        "frame@2": {
+          "acc": 1.0,
+          "entropy_bits": 0.002080516191199422
+        },
+        "random@2": {
+          "acc": 1.0,
+          "entropy_bits": 0.002079892670735717
+        },
+        "full@2": {
+          "acc": 1.0,
+          "entropy_bits": 0.010760074481368065
+        },
+        "frame@3": {
+          "acc": 1.0,
+          "entropy_bits": 0.0021458473056554794
+        },
+        "random@3": {
+          "acc": 1.0,
+          "entropy_bits": 0.0021262424997985363
+        },
+        "full@3": {
+          "acc": 1.0,
+          "entropy_bits": 0.00907929241657257
+        }
+      }
+    }
+  },
+  "verdict": {
+    "k5_baseline_acc": 0.18532986111111108,
+    "k5_frame_rescue_acc": 0.21354166666666666,
+    "k5_random_control_acc": 0.23524305555555555,
+    "rescued": false
+  }
+}

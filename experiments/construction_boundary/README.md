@@ -106,6 +106,28 @@ CKPT_DIR=/path/to/recurrence python recurrence_kltv_reeval.py
 CKPT_DIR=/path/to/recurrence python recurrence_residual_check.py
 ```
 
+## Writer-state rescue (Fig 3c)
+
+`rescue/` is a self-contained harness (extracted from the J-lens experiment suite;
+it depends only on the modules in that directory, plus PyTorch/numpy) that reproduces
+the writer-state rescue in Fig 3c of the paper. It transplants the residual state of an
+in-horizon donor position into a state-matched post-horizon recipient (six-position
+displacement on a shared recurrence orbit) and measures top-1 next-token accuracy at
+the recipient.
+
+```bash
+python rescue/run_phase6_rescue.py \
+    --k5-checkpoints <seed42.pt> <seed1337.pt> <seed2024.pt> \
+    --control-checkpoint <full-horizon K=15 .pt> \
+    --out results/phase6_rescue
+```
+
+Result summary: `results/phase6_rescue_summary.json`. The full-residual transplant
+rescues post-horizon accuracy ($0.19 \to 0.80 \to 0.97 \to 1.00$ at writer blocks 1--3);
+frame- and random-subspace patches and the embedding-layer patch do not (${\sim}0.22$);
+the full-horizon control is unaffected ($1.00$). This experiment is exploratory
+(see the paper's Methods).
+
 ## Trained-model checkpoints
 
 The checkpoints (~11 MB each: integer/opaque π-experiment models, plus the 15 p = 31
