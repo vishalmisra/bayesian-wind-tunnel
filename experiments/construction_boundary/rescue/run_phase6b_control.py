@@ -90,8 +90,11 @@ def gen_mismatch_donor(test, q_pos, p_pos, p, seq_len, seed):
                 orb[j] = int((ap * orb[j - 1] + bp) % p)
             if orb[0] == orb[1] or orb[p_pos] == orb[p_pos + 1]:
                 continue
+            cand_t = int((ap * int(t[i]) + bp) % p)
+            if cand_t == int(test[i, q_pos + 1]):   # enforce donor target != recipient target
+                continue
             donor[i] = orb
-            don_t[i] = int((ap * int(t[i]) + bp) % p)
+            don_t[i] = cand_t
             break
     return torch.from_numpy(donor), don_t, test[:, q_pos + 1].numpy().astype(int)
 
