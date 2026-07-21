@@ -128,6 +128,20 @@ frame- and random-subspace patches and the embedding-layer patch do not (${\sim}
 the full-horizon control is unaffected ($1.00$). This experiment is exploratory
 (see the paper's Methods).
 
+`rescue/run_phase6b_control.py` runs the two confound controls (Extended Data
+Fig. 1): the **writer-update transplant** (position-preserving -- adds only the
+donor block's computed update, still rescues 0.19->0.79 at block 3) and the
+**mismatched-donor redirect** (a donor sharing the recipient's token but with
+different `(a,b)` steers the prediction onto the donor's target: 1.00 for the
+full transplant, 0.66 for writer-update; the recipient's own target stays at
+chance). Result summary: `rescue/phase6b_control.json`.
+
+```bash
+python rescue/run_phase6b_control.py \
+    --k5-checkpoints <seed42.pt> <seed1337.pt> <seed2024.pt> \
+    --out rescue/phase6b_control.json
+```
+
 ## Trained-model checkpoints
 
 The checkpoints (~11 MB each: integer/opaque π-experiment models, plus the 15 p = 31
