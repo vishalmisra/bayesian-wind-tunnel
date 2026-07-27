@@ -64,3 +64,5 @@ Thumbs.db
 !experiments/construction_boundary/results/
 !experiments/construction_boundary/results/**/
 !experiments/construction_boundary/results/**/*.json
+# interactive-doc build (not part of the paper source)
+experiments/jlens/note/interactive-paper/
