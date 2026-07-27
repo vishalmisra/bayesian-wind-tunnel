@@ -58,3 +58,6 @@ Thumbs.db
 
 # HuggingFace cache
 .cache/
+
+# interactive-doc build (not part of the paper source)
+experiments/jlens/note/interactive-paper/
