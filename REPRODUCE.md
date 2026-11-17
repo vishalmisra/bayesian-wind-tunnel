@@ -44,8 +44,8 @@ At 1000 steps the model hasn't converged yet (MAE ~1.1 bits), but loss is decrea
 
 | Paper | Figure/Table | Script |
 |-------|-------------|--------|
-| I | Tab. 1 (architecture comparison) | `paper1_bijection/train.py`, `train_lstm.py`, `train_mamba.py` |
-| I | Fig. 2 (entropy calibration) | `paper1_bijection/eval_entropy.py` |
+| I | Tab. 1 (architecture comparison) | `paper1_bijection/train_incremental.py`, `train_lstm.py`, `train_mamba.py` |
+| I | Fig. 2 (entropy calibration) | `paper1_bijection/train_incremental.py` (`train`, then `eval`) |
 | I | Fig. 5 (value manifold PCA) | `paper1_bijection/figures/geometric_analysis.py` |
 | I | Fig. 6 (key orthogonality) | `paper1_bijection/figures/manifold_visualization.py` |
 | I | Fig. 7 (HMM length generalization) | `paper1_hmm/eval_length_gen.py` |
@@ -88,25 +88,48 @@ huggingface-cli login
 
 ### Train transformer
 
+The paper's bijection transformer (2.67M parameters) is trained in two stages
+with `train_incremental.py`: 100k steps with keys sampled with replacement,
+then 50k more steps with keys sampled without replacement. Every sequence is a
+fresh random bijection, with cross-entropy at every value position.
+
 ```bash
-python experiments/paper1_bijection/train.py \
-    --V 20 --L 19 \
-    --dim 192 --layers 6 --heads 6 \
-    --batch_size 128 --lr 3e-4 \
-    --max_steps 100000 \
-    --seed 42
+# Stage 1: 100k steps, keys with replacement
+python experiments/paper1_bijection/train_incremental.py train \
+    --V 20 --L 19 --dim 192 --layers 6 --heads 6 \
+    --batch_size 64 --lr 1e-3 --max_steps 100000 \
+    --with_replacement --seed 42 --output_dir runs/bijection_seed42
+
+# Stage 2: continue to 150k steps, keys without replacement
+python experiments/paper1_bijection/train_incremental.py train \
+    --V 20 --L 19 --dim 192 --layers 6 --heads 6 \
+    --batch_size 64 --lr 1e-3 --max_steps 150000 \
+    --resume_from runs/bijection_seed42/ckpt_final.pt \
+    --seed 42 --output_dir runs/bijection_seed42
 ```
 
-**Expected:** Final entropy MAE < 0.01 bits against Bayesian posterior.
+About 50 minutes on one GPU.
 
 ### Evaluate entropy calibration
 
 ```bash
-python experiments/paper1_bijection/eval_entropy.py \
-    --checkpoint <path_to_checkpoint> \
-    --V 20 --L 19 \
-    --n_samples 2000
+# Keys with replacement (the paper's headline number)
+python experiments/paper1_bijection/train_incremental.py eval \
+    --ckpt runs/bijection_seed42/ckpt_final.pt --n 2000
+
+# Keys that never repeat: H_Bayes(k) = log2(V - k + 1)
+python experiments/paper1_bijection/train_incremental.py eval \
+    --ckpt runs/bijection_seed42/ckpt_final.pt --n 2000 --no_replacement
 ```
+
+**Expected** (seeds 42, 1337, 2024): entropy MAE 0.0017--0.0026 bits with
+replacement and 0.0033--0.0064 bits without. After stage 1 alone the error is
+much larger (about 0.1 and 0.6 bits), so stage 2 is required.
+
+`train.py` and `eval_entropy.py` in the same directory are an earlier
+query-lookup setup. `train.py` answers the final query through a built-in
+pointer head, so its accuracy does not measure the transformer's own output,
+and `eval_entropy.py` does not reproduce the paper's entropy numbers.
 
 ### Train architecture baselines
 

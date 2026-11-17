@@ -78,14 +78,17 @@ pip install -r requirements.txt
 Train a transformer on bijection elimination (the core wind tunnel):
 
 ```bash
-# Transformer (achieves ~0.007-bit MAE)
-python experiments/paper1_bijection/train.py --V 20 --L 19 --max_steps 100000
+# Transformer, stage 1 of 2 (see REPRODUCE.md for the full two-stage recipe
+# and evaluation; the result is ~0.003-bit MAE)
+python experiments/paper1_bijection/train_incremental.py train \
+    --with_replacement --max_steps 100000 --output_dir runs/bijection_seed42
 
 # LSTM baseline (achieves ~0.009-bit MAE on bijection, fails on HMM)
 python experiments/paper1_bijection/train_lstm.py --V 20 --L 19 --max_steps 100000
 
 # Evaluate entropy calibration against Bayesian posterior
-python experiments/paper1_bijection/eval_entropy.py --checkpoint logs/bijection/ckpt_final.pt
+python experiments/paper1_bijection/train_incremental.py eval \
+    --ckpt runs/bijection_seed42/ckpt_final.pt
 ```
 
 ### Paper I: HMM wind tunnel
